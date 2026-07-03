@@ -1,0 +1,37 @@
+SỬA LỖI "SITE NOT FOUND / 404" TRÊN FACEBOOK DEBUGGER
+=======================================================
+
+NGUYÊN NHÂN (đã xác định từ ảnh chụp Debugger của bạn):
+File index.html đang nằm trên repo là BẢN CŨ. Bên trong nó, thẻ og:url
+trỏ về địa chỉ không tồn tại:
+    https://nbpthanh.github.io/khao-sat-tinh-yeu/   ← SAI
+Facebook đi theo địa chỉ này → gặp 404 → hiện "Site not found".
+Trang quiz của bạn thực chất ĐÃ LIVE, chỉ cần thay file là xong.
+
+CÁCH SỬA (3 phút):
+
+1. Mở https://github.com/nbpthanh/Quiz-Kieu-Gan-Bo
+2. Bấm "Add file" → "Upload files"
+3. Kéo file index.html MỚI (kèm theo hướng dẫn này, hoặc trong gói
+   Quiz-Kieu-Gan-Bo-final.zip) vào → bấm "Commit changes"
+   → GitHub tự ghi đè bản cũ, không cần xóa trước
+4. Kiểm tra luôn: repo phải có cả file khao-sat-share-image.png
+   (nếu chưa có thì upload kèm ở bước 3)
+5. Đợi 1–2 phút cho GitHub Pages cập nhật
+
+SAU ĐÓ QUAY LẠI FACEBOOK DEBUGGER:
+6. Dán lại link: https://nbpthanh.github.io/Quiz-Kieu-Gan-Bo/
+7. Bấm "Thu thập lại" (Scrape Again) 2–3 lần
+8. Kiểm tra kết quả:
+   - "Mã phản hồi" phải là 200 (hết 404)
+   - "URL chính tắc" phải là .../Quiz-Kieu-Gan-Bo/ (hết khao-sat-tinh-yeu)
+   - "Xem trước liên kết" hiện ảnh Sternberg là THÀNH CÔNG
+
+Với LinkedIn: dán link vào https://www.linkedin.com/post-inspector
+và bấm "Inspect" một lần sau khi Facebook đã hiện đúng.
+
+CÁCH TỰ KIỂM TRA NHANH (không cần Debugger):
+- Mở https://nbpthanh.github.io/Quiz-Kieu-Gan-Bo/ → thấy quiz
+- Mở https://nbpthanh.github.io/Quiz-Kieu-Gan-Bo/khao-sat-share-image.png
+  → thấy ảnh
+Cả hai đều hiện = mọi thứ sẵn sàng để share.
