@@ -1,0 +1,50 @@
+HƯỚNG DẪN ĐƯA KHẢO SÁT LÊN GITHUB PAGES (MIỄN PHÍ)
+====================================================
+
+Bạn chỉ cần trình duyệt web, không cần cài gì cả. Khoảng 5 phút là xong.
+
+BƯỚC 1 — Tạo tài khoản GitHub (nếu chưa có)
+  Vào https://github.com/signup và đăng ký (miễn phí).
+
+BƯỚC 2 — Tạo repository mới
+  1. Vào https://github.com/new
+  2. Ô "Repository name": gõ    khao-sat-tinh-yeu
+  3. Chọn "Public"
+  4. Bấm nút "Create repository"
+
+BƯỚC 3 — Tải 2 file lên
+  1. Trong trang repository vừa tạo, bấm link "uploading an existing file"
+     (hoặc nút "Add file" → "Upload files")
+  2. Kéo-thả 2 file này vào:
+       - index.html
+       - khao-sat-share-image.png
+  3. Bấm nút xanh "Commit changes"
+
+BƯỚC 4 — Bật GitHub Pages
+  1. Trong repository, bấm tab "Settings"
+  2. Menu bên trái, bấm "Pages"
+  3. Mục "Branch": chọn "main", giữ nguyên "/ (root)", bấm "Save"
+  4. Đợi 1–2 phút, tải lại trang — link của bạn sẽ hiện ra, dạng:
+       https://TEN-GITHUB-CUA-BAN.github.io/khao-sat-tinh-yeu/
+
+BƯỚC 5 — Cập nhật link ảnh chia sẻ (quan trọng!)
+  1. Trong repository, bấm vào file index.html → bấm biểu tượng bút chì (Edit)
+  2. Nhấn Ctrl+F (hoặc Cmd+F), tìm:  TEN-GITHUB-CUA-BAN
+  3. Thay cả 3 chỗ bằng tên đăng nhập GitHub thật của bạn
+     (ví dụ tên bạn là "minhanh99" thì sửa thành minhanh99.github.io)
+  4. Bấm "Commit changes"
+
+XONG! Giờ bạn có thể chia sẻ link ở Bước 4 lên Facebook, Zalo, v.v.
+Ảnh xem trước sẽ tự hiện khi dán link.
+
+MẸO:
+- Nếu ảnh xem trước chưa hiện trên Facebook, dán link vào
+  https://developers.facebook.com/tools/debug/ và bấm "Scrape Again".
+- Mỗi lần muốn sửa nội dung khảo sát, chỉ cần Edit file index.html
+  ngay trên GitHub rồi Commit — trang tự cập nhật sau ~1 phút.
+
+LƯU Ý VỀ BỘ ĐẾM LƯỢT TRUY CẬP:
+Huy hiệu "lượt truy cập" hiện tại chỉ hoạt động khi trang chạy như
+Artifact trên Claude.ai. Trên GitHub Pages, huy hiệu sẽ tự ẩn đi
+(trang vẫn chạy bình thường). Nếu bạn muốn đếm lượt truy cập trên
+GitHub Pages, hãy quay lại nhờ Claude gắn một dịch vụ đếm miễn phí nhé.

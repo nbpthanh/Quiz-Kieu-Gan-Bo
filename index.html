@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xu Hướng Gắn Bó Trong Tình Yêu</title>
+
+<!-- ===== SOCIAL SHARING PREVIEW (Open Graph + Twitter Card) ===== -->
+<!-- LƯU Ý: thay 2 URL bên dưới bằng địa chỉ thật sau khi bạn đăng trang & ảnh lên mạng -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Xu Hướng Gắn Bó Trong Tình Yêu">
+<meta property="og:description" content="Khám phá phong cách gắn bó của bạn trong tình yêu qua 29 câu hỏi — An toàn, Lo âu, Né tránh hay Hỗn loạn?">
+<meta property="og:url" content="https://TEN-GITHUB-CUA-BAN.github.io/khao-sat-tinh-yeu/">
+<meta property="og:image" content="https://TEN-GITHUB-CUA-BAN.github.io/khao-sat-tinh-yeu/khao-sat-share-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mối liên hệ giữa các kiểu gắn bó và tam giác tình yêu Sternberg — Khám phá cách bạn yêu thương và kết nối.">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Xu Hướng Gắn Bó Trong Tình Yêu">
+<meta name="twitter:description" content="Khám phá phong cách gắn bó của bạn trong tình yêu qua 29 câu hỏi — An toàn, Lo âu, Né tránh hay Hỗn loạn?">
+<meta name="twitter:image" content="https://TEN-GITHUB-CUA-BAN.github.io/khao-sat-tinh-yeu/khao-sat-share-image.png">
+<meta name="description" content="Khám phá phong cách gắn bó của bạn trong tình yêu qua 29 câu hỏi — An toàn, Lo âu, Né tránh hay Hỗn loạn?">
+<!-- ===== END SOCIAL SHARING PREVIEW ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF1EE;
+    --panel:#F7E1E8;
+    --panel-alt:#EFE3F3;
+    --ink:#3A2A3D;
+    --ink-soft:#7A6478;
+    --rose:#CE5D82;
+    --rose-soft:#E8AEBF;
+    --lavender:#8863AA;
+    --lavender-soft:#CBB6DE;
+    --gold:#E0A24F;
+    --fearful:#A9527A;
+    --line:#E7CBD4;
+    --shadow: 0 10px 30px -12px rgba(58,42,61,0.25);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(ellipse 600px 400px at 12% -5%, rgba(206,93,130,0.16), transparent 60%),
+      radial-gradient(ellipse 500px 500px at 105% 15%, rgba(136,99,170,0.16), transparent 60%),
+      radial-gradient(ellipse 500px 400px at 50% 115%, rgba(224,162,79,0.10), transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Be Vietnam Pro', system-ui, sans-serif;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Playfair Display', Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  button{font-family:inherit;}
+  button:focus-visible, a:focus-visible{
+    outline:3px solid var(--lavender);
+    outline-offset:3px;
+  }
+
+  #app{
+    max-width:640px;
+    margin:0 auto;
+    padding:clamp(20px,5vw,48px) clamp(18px,5vw,28px) 60px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .screen{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    animation:fadeIn .5s ease both;
+  }
+  @keyframes fadeIn{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
+
+  /* ---------- INTRO ---------- */
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--lavender);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  .intro-title{
+    font-size:clamp(30px,6vw,44px);
+    line-height:1.12;
+    margin:0 0 16px;
+  }
+  .intro-title em{color:var(--rose); font-style:italic;}
+  .intro-sub{
+    font-size:16px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    max-width:52ch;
+    margin:0 0 32px;
+  }
+
+  .thread-wrap{
+    margin: 4px 0 36px;
+  }
+  .thread-wrap svg{width:100%; height:auto; display:block;}
+  .thread-label{
+    font-family:'Be Vietnam Pro', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    fill:var(--ink-soft);
+  }
+
+  .cta{
+    appearance:none;
+    border:none;
+    cursor:pointer;
+    background:linear-gradient(135deg, var(--rose), var(--lavender));
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    padding:16px 26px;
+    border-radius:100px;
+    box-shadow:var(--shadow);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:transform .15s ease, box-shadow .15s ease;
+    align-self:flex-start;
+  }
+  .cta:hover{transform:translateY(-2px); box-shadow:0 14px 34px -12px rgba(58,42,61,0.35);}
+  .cta:active{transform:translateY(0px) scale(0.99);}
+
+  .meta-row{
+    margin-top:18px;
+    font-size:13px;
+    color:var(--ink-soft);
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+  .dot{width:4px; height:4px; border-radius:50%; background:var(--ink-soft); display:inline-block;}
+
+  .visit-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,255,255,0.65);
+    border:1px solid var(--line);
+    border-radius:100px;
+    padding:7px 14px;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--ink-soft);
+    margin-bottom:22px;
+    align-self:flex-start;
+  }
+  .visit-badge .heart{
+    color:var(--rose);
+    font-size:13px;
+  }
+  .visit-badge strong{color:var(--ink);}
+  .visit-badge.hidden{display:none;}
+
+  .sound-toggle{
+    position:fixed;
+    top:16px;
+    right:16px;
+    z-index:50;
+    appearance:none;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(4px);
+    cursor:pointer;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--ink);
+    box-shadow:0 4px 14px -6px rgba(58,42,61,0.25);
+    transition:transform .15s ease;
+  }
+  .sound-toggle:hover{transform:scale(1.08);}
+
+  /* ---------- QUIZ ---------- */
+  .quiz-header{margin-bottom:30px;}
+  .progress-track{
+    position:relative;
+    height:2px;
+    background:var(--line);
+    border-radius:2px;
+    margin-bottom:10px;
+  }
+  .progress-fill{
+    position:absolute;
+    top:0; left:0;
+    height:2px;
+    background:linear-gradient(90deg, var(--rose), var(--lavender));
+    border-radius:2px;
+    transition:width .4s ease;
+  }
+  .progress-bead{
+    position:absolute;
+    top:50%;
+    width:12px; height:12px;
+    border-radius:50%;
+    background:var(--rose);
+    border:2px solid var(--bg);
+    box-shadow:0 0 0 2px var(--rose-soft);
+    transform:translate(-50%,-50%);
+    transition:left .4s ease;
+  }
+  .progress-text{
+    font-size:13px;
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+
+  .question-card{
+    background:var(--panel);
+    border-radius:22px;
+    padding:clamp(24px,5vw,40px);
+    box-shadow:var(--shadow);
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:280px;
+  }
+  .question-num{
+    font-size:13px;
+    font-weight:600;
+    color:var(--rose);
+    margin-bottom:14px;
+    letter-spacing:0.04em;
+  }
+  .question-text{
+    font-family:'Playfair Display', Georgia, serif;
+    font-size:clamp(21px,4vw,27px);
+    line-height:1.4;
+    font-weight:600;
+    margin:0 0 32px;
+  }
+
+  .likert{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:8px;
+  }
+  .likert-btn{
+    appearance:none;
+    border:2px solid var(--line);
+    background:#fff;
+    cursor:pointer;
+    border-radius:50%;
+    width:clamp(40px,9vw,52px);
+    height:clamp(40px,9vw,52px);
+    font-size:15px;
+    font-weight:600;
+    color:var(--ink-soft);
+    transition:all .15s ease;
+    flex-shrink:0;
+  }
+  .likert-btn:hover{border-color:var(--rose-soft); color:var(--ink);}
+  .likert-btn.selected{
+    background:linear-gradient(135deg, var(--rose), var(--lavender));
+    border-color:transparent;
+    color:#fff;
+    transform:scale(1.08);
+  }
+  .likert-col{display:flex; flex-direction:column; align-items:center; gap:8px; flex:1;}
+  .likert-caption{
+    font-size:11.5px;
+    color:var(--ink-soft);
+    text-align:center;
+    line-height:1.3;
+    max-width:70px;
+    visibility:hidden;
+  }
+  .likert-col:first-child .likert-caption,
+  .likert-col:last-child .likert-caption{visibility:visible;}
+
+  .choice-list{display:flex; flex-direction:column; gap:10px;}
+  .choice-btn{
+    appearance:none;
+    border:2px solid var(--line);
+    background:#fff;
+    cursor:pointer;
+    border-radius:14px;
+    padding:14px 16px;
+    text-align:left;
+    font-size:14.5px;
+    line-height:1.5;
+    color:var(--ink);
+    transition:all .15s ease;
+  }
+  .choice-btn:hover{border-color:var(--rose-soft); transform:translateX(2px);}
+  .choice-btn.selected{
+    border-color:transparent;
+    background:linear-gradient(135deg, var(--rose), var(--lavender));
+    color:#fff;
+  }
+  .soft-note{
+    margin-top:16px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    font-style:italic;
+  }
+
+  .card-holder{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .card-holder > *{flex:1;}
+  .card-anim{
+    transition:opacity .22s ease, transform .22s ease;
+    will-change:opacity, transform;
+  }
+  .card-exit{opacity:0; transform:translateX(-20px);}
+  .card-exit-back{opacity:0; transform:translateX(20px);}
+  .card-enter{opacity:0; transform:translateX(20px); transition:none;}
+  .card-enter-back{opacity:0; transform:translateX(-20px); transition:none;}
+
+  .interlude{
+    background:var(--panel);
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    min-height:280px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:14px;
+    padding:36px 28px;
+  }
+  .interlude-icon{font-size:34px; line-height:1;}
+  .interlude-big{
+    font-family:'Playfair Display', Georgia, serif;
+    font-size:clamp(20px,4.5vw,26px);
+    font-weight:600;
+    line-height:1.45;
+    max-width:22ch;
+  }
+  .interlude-sub{
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+
+  .quiz-nav{
+    margin-top:22px;
+    display:flex;
+    justify-content:flex-start;
+  }
+  .back-btn{
+    appearance:none;
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:var(--ink-soft);
+    font-size:14px;
+    font-weight:500;
+    padding:8px 4px;
+  }
+  .back-btn:hover{color:var(--ink);}
+  .back-btn[disabled]{visibility:hidden;}
+
+  /* ---------- RESULT ---------- */
+  .result-eyebrow{
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .result-title{
+    font-size:clamp(34px,7vw,50px);
+    margin:0 0 6px;
+  }
+  .result-subtitle{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0 0 26px;
+  }
+  .result-thread{margin-bottom:28px;}
+  .result-desc{
+    font-size:16px;
+    line-height:1.7;
+    color:var(--ink);
+    margin:0 0 28px;
+  }
+
+  .section-label{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--lavender);
+    margin:0 0 14px;
+  }
+
+  .bars{margin-bottom:32px;}
+  .bar-row{margin-bottom:14px;}
+  .bar-top{
+    display:flex;
+    justify-content:space-between;
+    font-size:13.5px;
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .bar-track{
+    height:10px;
+    background:var(--panel-alt);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height:100%;
+    border-radius:6px;
+    transition:width 1s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .card-block{
+    background:var(--panel);
+    border-radius:18px;
+    padding:22px 24px;
+    margin-bottom:16px;
+  }
+  .card-block ul{margin:0; padding-left:18px;}
+  .card-block li{margin-bottom:6px; line-height:1.5; font-size:14.5px;}
+  .card-block p{margin:0; line-height:1.6; font-size:14.5px;}
+
+  .compat-row{padding:14px 0; border-bottom:1px solid var(--line);}
+  .compat-row:last-child{border-bottom:none; padding-bottom:2px;}
+  .compat-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;}
+  .compat-name{font-weight:700; font-size:14px;}
+  .compat-hearts{font-size:13px; letter-spacing:2.5px;}
+  .compat-hearts .on{color:var(--rose);}
+  .compat-hearts .off{color:var(--rose-soft); opacity:0.45;}
+  .compat-text{font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin:0;}
+
+  .secondary-line{
+    font-size:14px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:-8px 0 24px;
+    padding:14px 18px;
+    background:rgba(255,255,255,0.5);
+    border-radius:14px;
+    border:1px solid var(--line);
+  }
+  .secondary-line strong{color:var(--ink);}
+
+  .triangle-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:6px 0 18px;
+  }
+  .triangle-wrap svg{width:100%; max-width:340px; height:auto;}
+  .tri-vertex-label{
+    font-family:'Be Vietnam Pro', sans-serif;
+    font-size:13px;
+    font-weight:700;
+    fill:var(--ink);
+  }
+  .tri-vertex-pct{
+    font-family:'Be Vietnam Pro', sans-serif;
+    font-size:12px;
+    font-weight:600;
+    fill:var(--ink-soft);
+  }
+  .lovetype-name{
+    font-family:'Playfair Display', Georgia, serif;
+    font-size:22px;
+    font-weight:600;
+    color:var(--rose);
+    text-align:center;
+    margin:6px 0 8px;
+  }
+
+  .conclusion{
+    background:linear-gradient(135deg, rgba(206,93,130,0.10), rgba(136,99,170,0.12));
+    border-radius:18px;
+    padding:24px 26px;
+    margin-bottom:20px;
+    border:1px solid var(--line);
+  }
+  .conclusion .section-label{color:var(--rose);}
+  .conclusion p{margin:0 0 12px; line-height:1.7; font-size:14.5px;}
+  .conclusion p:last-child{margin-bottom:0;}
+  .conclusion strong{color:var(--ink);}
+
+  .disclaimer{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:20px 0 28px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+  }
+
+  .restart-btn{
+    appearance:none;
+    border:2px solid var(--ink);
+    background:none;
+    color:var(--ink);
+    cursor:pointer;
+    font-size:14.5px;
+    font-weight:600;
+    padding:13px 22px;
+    border-radius:100px;
+    align-self:flex-start;
+    transition:all .15s ease;
+  }
+  .restart-btn:hover{background:var(--ink); color:var(--bg);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  @media (max-width:420px){
+    .likert-caption{font-size:10.5px; max-width:56px;}
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- DATA ---------------- */
+
+  var CHILD_QUESTIONS = [
+    {
+      id:'c1',
+      text:'Khi còn nhỏ, mỗi lần bạn buồn hay khóc, điều thường xảy ra là…',
+      options:[
+        {style:'secure',   text:'Có người lại gần, lắng nghe và dỗ dành mình'},
+        {style:'avoidant', text:'Mình thường tự nín, tự vượt qua một mình'},
+        {style:'anxious',  text:'Lúc được dỗ dành, lúc bị bỏ mặc — mình không đoán trước được'},
+        {style:'fearful',  text:'Mình vừa muốn được dỗ, vừa sợ làm người lớn phiền lòng'}
+      ]
+    },
+    {
+      id:'c2',
+      text:'Ký ức của bạn về không khí trong nhà thời thơ ấu gần với điều nào nhất?',
+      options:[
+        {style:'anxious',  text:'Yêu thương có đó, nhưng mình luôn phải cố gắng để được chú ý'},
+        {style:'secure',   text:'Ấm áp và ổn định — nhà là nơi mình thấy an toàn'},
+        {style:'fearful',  text:'Khó đoán — có ngày rất vui, có ngày mình chỉ muốn thu nhỏ lại'},
+        {style:'avoidant', text:'Mọi người ít nói về cảm xúc — ai cũng tự lo phần mình'}
+      ]
+    },
+    {
+      id:'c3',
+      text:'Hồi nhỏ, khi có chuyện vui hay điều gì muốn khoe, bạn thường…',
+      options:[
+        {style:'avoidant', text:'Giữ cho riêng mình, hoặc chỉ kể khi được hỏi'},
+        {style:'fearful',  text:'Muốn kể lắm, nhưng chần chừ vì không biết sẽ được đón nhận ra sao'},
+        {style:'secure',   text:'Chạy đi kể ngay, vì biết sẽ có người vui cùng mình'},
+        {style:'anxious',  text:'Kể và rất mong được khen — nếu bị lơ đi, mình buồn rất lâu'}
+      ]
+    }
+  ];
+
+  var TRIANGLE_QUESTIONS = [
+    {id:'t1', comp:'intimacy',   text:'Tôi có thể chia sẻ những điều sâu kín nhất với người mình yêu mà không sợ bị phán xét.'},
+    {id:'t2', comp:'passion',    text:'Sự rung động và sức hút với người ấy vẫn là một phần sống động trong tôi.'},
+    {id:'t3', comp:'commitment', text:'Tôi chủ động lựa chọn gắn bó lâu dài, kể cả khi mối quan hệ đi qua giai đoạn khó khăn.'},
+    {id:'t4', comp:'intimacy',   text:'Tôi cảm thấy người ấy thực sự hiểu con người thật của tôi — kể cả những góc chưa hoàn hảo.'},
+    {id:'t5', comp:'passion',    text:'Sự lãng mạn với tôi không chỉ ở giai đoạn đầu — tôi muốn giữ lửa cho nó lâu dài.'},
+    {id:'t6', comp:'commitment', text:'Với tôi, cùng nhau đi qua cả những ngày nhạt nhòa cũng là một phần của tình yêu.'}
+  ];
+
+  var QUESTIONS = [
+    {id:1,  style:'secure',   text:'Tôi cảm thấy dễ dàng tin tưởng người yêu mà không cần lo lắng thái quá.'},
+    {id:2,  style:'anxious',  text:'Tôi thường lo lắng rằng người yêu sẽ không còn yêu mình nữa.'},
+    {id:3,  style:'avoidant', text:'Tôi cảm thấy ngột ngạt khi người yêu muốn gần gũi quá mức.'},
+    {id:4,  style:'fearful',  text:'Tôi vừa muốn gần gũi người yêu, vừa sợ bị tổn thương nếu quá thân thiết.'},
+    {id:5,  style:'secure',   text:'Tôi thoải mái chia sẻ cảm xúc thật của mình với người yêu.'},
+    {id:6,  style:'anxious',  text:'Tôi cảm thấy bất an khi người yêu không trả lời tin nhắn ngay.'},
+    {id:7,  style:'avoidant', text:'Tôi thích tự mình giải quyết vấn đề hơn là dựa vào người yêu.'},
+    {id:8,  style:'fearful',  text:'Tôi thường tự mâu thuẫn: lúc muốn ở gần, lúc lại muốn tránh xa.'},
+    {id:9,  style:'secure',   text:'Tôi tin rằng mình xứng đáng được yêu thương và tôn trọng.'},
+    {id:10, style:'anxious',  text:'Tôi cần được người yêu trấn an thường xuyên mới cảm thấy yên tâm.'},
+    {id:11, style:'avoidant', text:'Tôi ngại chia sẻ những cảm xúc sâu kín với người yêu.'},
+    {id:12, style:'fearful',  text:'Tôi khó tin tưởng hoàn toàn vào người yêu, dù rất muốn.'},
+    {id:13, style:'secure',   text:'Tôi có thể vừa gần gũi với người yêu, vừa giữ được không gian riêng cho bản thân.'},
+    {id:14, style:'anxious',  text:'Tôi hay so sánh mối quan hệ của mình với người khác và sợ mình không đủ tốt.'},
+    {id:15, style:'avoidant', text:'Tôi thường giữ khoảng cách khi mối quan hệ trở nên quá thân mật.'},
+    {id:16, style:'fearful',  text:'Tôi sợ bị bỏ rơi, nhưng cũng sợ bị kiểm soát trong tình yêu.'},
+    {id:17, style:'secure',   text:'Khi có mâu thuẫn, tôi tin rằng hai người có thể cùng nhau giải quyết.'},
+    {id:18, style:'anxious',  text:'Tôi dễ nghĩ đến điều tồi tệ nhất khi người yêu có vẻ xa cách.'},
+    {id:19, style:'avoidant', text:'Với tôi, sự độc lập quan trọng hơn là gắn bó chặt chẽ với ai đó.'},
+    {id:20, style:'fearful',  text:'Cảm xúc của tôi trong tình yêu thường thay đổi thất thường, khó đoán.'}
+  ];
+
+  var STYLE_META = {
+    secure:   {label:'An Toàn',  color:'var(--lavender)'},
+    anxious:  {label:'Lo Âu',    color:'var(--rose)'},
+    avoidant: {label:'Né Tránh', color:'var(--gold)'},
+    fearful:  {label:'Hỗn Loạn', color:'var(--fearful)'}
+  };
+
+  var TRI_META = {
+    intimacy:   'Thân mật',
+    passion:    'Đam mê',
+    commitment: 'Cam kết'
+  };
+
+  // 8 kiểu tình yêu theo Sternberg, xác định bởi đỉnh nào đang "cao" (I=Thân mật, P=Đam mê, C=Cam kết)
+  var LOVE_TYPES = {
+    'IPC':{name:'Tình yêu trọn vẹn',   d:'Cả ba đỉnh đều vững — trạng thái lý tưởng mà Sternberg gọi là Consummate Love. Điều quý nhất không phải là đạt được nó, mà là giữ được nó mỗi ngày.'},
+    'IP': {name:'Tình yêu lãng mạn',   d:'Gần gũi và say đắm, nhưng cạnh Cam kết còn mỏng. Tình yêu này đẹp như một chuyến đi — câu hỏi là hai bạn có muốn cùng nhau xây một mái nhà.'},
+    'IC': {name:'Tình yêu bầu bạn',    d:'Thấu hiểu và bền chặt như tri kỷ, nhưng ngọn lửa Đam mê đang nhỏ dần. Đừng lo — đam mê có thể được thắp lại bằng sự mới mẻ và những cuộc hẹn đúng nghĩa.'},
+    'PC': {name:'Tình yêu bồng bột',   d:'Say đắm và ràng buộc nhanh khi chưa kịp xây sự thấu hiểu — Sternberg gọi là Fatuous Love. Hãy chậm lại một nhịp để vun đắp cạnh Thân mật.'},
+    'I':  {name:'Sự quý mến',          d:'Kết nối tâm hồn ấm áp như một tình bạn sâu sắc. Nếu muốn nhiều hơn, hãy để Đam mê và Cam kết có cơ hội lớn lên.'},
+    'P':  {name:'Sự say mê',           d:'Sức hút mãnh liệt nhưng chưa có gốc rễ — Sternberg gọi là Infatuation. Cảm xúc này đẹp, và nó cần thời gian để trở thành tình yêu.'},
+    'C':  {name:'Tình yêu trống rỗng', d:'Sự ràng buộc còn đó nhưng gần gũi và rung động đã phai — Sternberg gọi là Empty Love. Đây có thể là hồi chuông để hai người nhìn lại và bồi đắp từ đầu.'},
+    '':   {name:'Đang định hình',      d:'Cả ba đỉnh đều còn thấp — có thể bạn đang độc thân, mới bắt đầu, hoặc đang ở một khoảng lặng. Không sao cả; tam giác nào cũng bắt đầu từ những nét vẽ đầu tiên.'}
+  };
+
+  // Cách mỗi phong cách gắn bó định hình tam giác tình yêu (theo ma trận tương tác)
+  var TRIANGLE_NOTES = {
+    secure:{
+      intro:'Người gắn bó An Toàn có khả năng cao nhất chạm tới Tình yêu trọn vẹn — nơi cả ba đỉnh của tam giác phát triển cân bằng.',
+      items:[
+        'Thân mật — cao và lành mạnh: bạn không sợ bộc lộ tổn thương, biết lắng nghe và thấu cảm mà không phán xét',
+        'Đam mê — ổn định: đến từ sức hút tự nhiên, không cần kịch tính hay sự bất an để duy trì',
+        'Cam kết — vững chắc: là lựa chọn tự nguyện dựa trên niềm tin, sự tôn trọng và đồng điệu về giá trị sống'
+      ]
+    },
+    anxious:{
+      intro:'Với người gắn bó Lo Âu, tam giác thường nghiêng mạnh về phía Đam mê — và cần chú ý để sự Thân mật không vô tình trở thành kiểm soát.',
+      items:[
+        'Thân mật — khao khát rất lớn: muốn hòa làm một ngay lập tức, đôi khi vô tình chạm vào ranh giới riêng của đối phương',
+        'Đam mê — rất cao nhưng dễ bất ổn: nỗi lo, ghen tuông và sợ mất mát đôi khi bị nhầm là "lửa yêu"; vòng cãi vã – làm hòa tạo cảm giác mãnh liệt nhưng bào mòn cả hai',
+        'Cam kết — đến quá sớm: đòi hỏi sự ràng buộc nhanh để xoa dịu nỗi sợ bị bỏ rơi, trước cả khi thật sự hiểu nhau'
+      ]
+    },
+    avoidant:{
+      intro:'Với người gắn bó Né Tránh, cạnh Thân mật thường là cạnh mỏng nhất của tam giác — và đó chính là nơi đáng để bắt đầu vun đắp.',
+      items:[
+        'Thân mật — thấp: bức tường phòng vệ khiến bạn muốn rút lui khi mối quan hệ bước vào giai đoạn cần kết nối tâm hồn sâu sắc',
+        'Đam mê — rực rỡ ở giai đoạn chinh phục, nhưng dễ nguội nhanh khi đối phương bắt đầu cần sự gắn kết',
+        'Cam kết — thận trọng: dễ đánh đồng cam kết với việc mất tự do, nên thường cam kết bằng lý trí và nghĩa vụ hơn là sự tự nguyện của con tim'
+      ]
+    },
+    fearful:{
+      intro:'Với người gắn bó Hỗn Loạn, cả ba cạnh của tam giác đều dao động theo vòng lặp "vừa muốn chạm tay vào, vừa muốn rụt tay lại".',
+      items:[
+        'Thân mật — lúc mở lúc đóng: khi đối phương xa cách, bạn khao khát kéo họ lại gần; khi họ đến quá gần, bạn lại thấy ngột ngạt và đẩy ra',
+        'Đam mê — mãnh liệt nhưng thất thường: cảm xúc lên xuống theo chính nhịp tiến – lùi của bạn',
+        'Cam kết — vừa mong vừa sợ: muốn một bến đỗ nhưng sợ trao trọn niềm tin; sự kiên định từ cả hai phía sẽ giúp cạnh này vững dần'
+      ]
+    }
+  };
+
+  var RESULTS = {
+    secure:{
+      title:'An Toàn',
+      subtitle:'Người gắn bó an toàn',
+      desc:'Bạn cảm thấy thoải mái với cả sự thân mật lẫn khoảng cách. Bạn tin tưởng người yêu, tin vào giá trị của bản thân, và không quá sợ hãi trước những thăng trầm bình thường trong một mối quan hệ. Sợi dây gắn bó của bạn đủ chắc để chịu được va chạm, nhưng vẫn đủ mềm để không siết chặt ai.',
+      signs:['Bạn nói ra được điều mình cần thay vì để người kia tự đoán','Khi mâu thuẫn, bạn tập trung giải quyết vấn đề thay vì công kích nhau','Bạn không hoảng loạn khi hai người tạm xa nhau một thời gian','Bạn vui với thành công và các mối quan hệ khác của người yêu, không thấy bị đe dọa'],
+      roots:'Phong cách an toàn thường hình thành khi lớn lên bên những người chăm sóc ổn định và nhạy bén với cảm xúc — khi khóc có người dỗ, khi cần có người ở đó. Trải nghiệm "mình được lắng nghe" ấy dần trở thành niềm tin nền tảng: yêu thương là điều đáng tin cậy. Và tin vui là phong cách này hoàn toàn có thể được "học" ở tuổi trưởng thành, qua những mối quan hệ lành mạnh.',
+      strengths:['Giao tiếp cởi mở, thẳng thắn về cảm xúc','Tin tưởng đối phương mà không cần kiểm soát','Biết cân bằng giữa gần gũi và không gian riêng'],
+      partnerNote:'Bạn là điểm tựa của mối quan hệ, nhưng đừng quên bạn cũng có lúc mệt. Hãy cho người yêu biết khi bạn cần được chăm sóc ngược lại — vững vàng không có nghĩa là không cần ai.',
+      growth:'Bạn đã có một nền tảng vững vàng. Hãy tiếp tục kiên nhẫn và bao dung nếu người yêu của bạn có phong cách gắn bó khác bạn — sự ổn định của bạn có thể là điểm tựa cho họ.',
+      compat:{
+        secure:  {h:5, t:'Cặp đôi "nền tảng vàng" — cả hai đều biết yêu hết lòng và biết giữ khoảng trời riêng cho nhau.'},
+        anxious: {h:4, t:'Sự vững vàng của bạn là liều thuốc trấn an tự nhiên cho họ. Chỉ cần thêm một chút kiên nhẫn.'},
+        avoidant:{h:4, t:'Bạn đủ an toàn để không xem khoảng cách của họ là sự từ chối — đó chính là điều họ cần nhất.'},
+        fearful: {h:4, t:'Với sự kiên định của bạn, họ có thể dần học được rằng yêu thương không nhất thiết đi kèm tổn thương.'}
+      }
+    },
+    anxious:{
+      title:'Lo Âu',
+      subtitle:'Người gắn bó lo âu',
+      desc:'Bạn yêu bằng cả trái tim và luôn khao khát một sự kết nối sâu sắc. Nhưng đôi khi, nỗi sợ bị bỏ rơi khiến bạn dễ bất an khi người yêu im lặng hay có vẻ xa cách một chút. Sợi dây gắn bó của bạn rất nhạy — chỉ một cái rung nhẹ cũng khiến bạn lo liệu nó có đang lỏng ra không.',
+      signs:['Đọc đi đọc lại tin nhắn để "giải mã" thái độ của người yêu','Cần được nghe lời yêu thương, khẳng định thường xuyên mới thấy yên tâm','Dễ nhận lỗi về mình để giữ hòa khí, kể cả khi không hẳn là lỗi của bạn','Khi người yêu vui vẻ với người khác, trong bạn nhói lên một chút bất an'],
+      roots:'Phong cách lo âu thường bắt nguồn từ sự chăm sóc "lúc có lúc không" thời thơ ấu — yêu thương có đó nhưng khó đoán, nên đứa trẻ học cách phải bám chặt và quan sát thật kỹ để không bị bỏ lại. Nỗi bất an ấy không phải lỗi của bạn; nó từng là cách bạn tự bảo vệ mình.',
+      strengths:['Tinh tế, nhạy cảm với cảm xúc của người khác','Yêu hết mình, quan tâm chân thành và sâu sắc','Chủ động vun đắp và gìn giữ mối quan hệ'],
+      partnerNote:'Với bạn, sự im lặng đáng sợ hơn cả cãi vã. Một tin nhắn ngắn "anh đang bận, tối mình nói chuyện nhé" có giá trị hơn ngàn lời giải thích muộn màng. Người yêu bạn nên biết điều này — và bạn có thể là người nói cho họ biết.',
+      growth:'Hãy tập cho mình những khoảnh khắc tự trấn an trước khi tìm đến người yêu để được xoa dịu. Sự an toàn bền vững nhất luôn bắt đầu từ bên trong bạn.',
+      compat:{
+        secure:  {h:5, t:'Người an toàn cho bạn sự trấn an đều đặn mà không phán xét — mảnh ghép có tính chữa lành nhất với bạn.'},
+        anxious: {h:3, t:'Hai người rất hiểu nỗi bất an của nhau, nhưng dễ cùng cuốn vào vòng xoáy lo lắng. Nên có "quy ước trấn an" rõ ràng.'},
+        avoidant:{h:2, t:'Cặp "đuổi – bắt" kinh điển: bạn càng tiến, họ càng lùi. Không bất khả thi, nhưng cả hai phải hiểu rất rõ phong cách của nhau.'},
+        fearful: {h:3, t:'Nhiều cảm xúc mãnh liệt, nhiều thấu hiểu — nhưng cũng nhiều sóng gió. Cần học cách không phản ứng theo nỗi sợ của nhau.'}
+      }
+    },
+    avoidant:{
+      title:'Né Tránh',
+      subtitle:'Người gắn bó né tránh',
+      desc:'Bạn đề cao sự tự do và độc lập. Sự gần gũi quá mức đôi khi khiến bạn thấy ngột ngạt, nên bạn có xu hướng giữ một khoảng cách an toàn, kể cả với người mình yêu. Sợi dây gắn bó của bạn dài và lỏng — đủ để bạn tự do di chuyển, nhưng đôi khi khiến người kia cảm thấy xa vời.',
+      signs:['Bạn thấy nhẹ nhõm khi có thời gian một mình sau nhiều ngày kề cận','Câu "mình cần nói chuyện" khiến bạn chỉ muốn… đi chỗ khác','Bạn ít khi chủ động kể về cảm xúc của mình, trừ khi được hỏi','Bạn thể hiện tình yêu bằng hành động chăm lo nhiều hơn là lời nói'],
+      roots:'Phong cách né tránh thường hình thành khi cảm xúc thời nhỏ ít được đón nhận — khóc thì bị bảo "nín đi", buồn thì phải tự vượt qua. Đứa trẻ ấy học được rằng: muốn ổn thì phải tự lo. Sự độc lập của bạn là một sức mạnh thật, chỉ là đôi khi nó được xây từ việc phải mạnh mẽ quá sớm.',
+      strengths:['Mạnh mẽ, tự chủ, biết chăm sóc bản thân','Bình tĩnh, ít bị cuốn theo những xáo trộn cảm xúc','Tôn trọng không gian riêng của người khác'],
+      partnerNote:'Khi bạn im lặng và rút lui, đó thường là lúc bạn đang quá tải chứ không phải hết yêu. Người yêu bạn cần được biết điều đó — và bạn cũng cần nói cho họ, dù chỉ bằng một câu ngắn: "Cho mình chút thời gian, mình sẽ quay lại."',
+      growth:'Thử cho phép bản thân dựa dẫm một chút. Chia sẻ cảm xúc không khiến bạn yếu đuối hơn — nó chỉ giúp sợi dây gắn bó giữa hai người chắc chắn hơn thôi.',
+      compat:{
+        secure:  {h:5, t:'Người an toàn tôn trọng không gian của bạn mà không hờn dỗi — bạn sẽ thấy dễ thở và dần dần tự mở lòng.'},
+        anxious: {h:2, t:'Nhu cầu gần gũi của họ dễ khiến bạn ngộp, và sự rút lui của bạn khiến họ hoảng. Cần rất nhiều giao tiếp để thoát vòng đuổi bắt.'},
+        avoidant:{h:3, t:'Êm đềm, tôn trọng tự do của nhau — nhưng dễ thành hai đường thẳng song song. Hãy chủ động tạo khoảnh khắc kết nối.'},
+        fearful: {h:3, t:'Cả hai đều ngại mở lòng nên tiến triển chậm; bù lại, sự không thúc ép của bạn là điều họ rất trân trọng.'}
+      }
+    },
+    fearful:{
+      title:'Hỗn Loạn',
+      subtitle:'Người gắn bó sợ hãi – né tránh',
+      desc:'Trái tim bạn vừa khao khát yêu thương, vừa mang nỗi sợ bị tổn thương. Bạn muốn gần nhưng lại sợ quá gần, muốn tin nhưng khó tin trọn vẹn. Sợi dây gắn bó của bạn thường bị thắt nút ở giữa — vừa kéo lại gần, vừa đẩy ra xa cùng một lúc.',
+      signs:['Bạn có thể rất nồng nhiệt hôm nay và lạnh nhạt ngày mai, mà chính bạn cũng không hiểu vì sao','Khi mối quan hệ đang êm đẹp, bạn lại thấy bất an, như đang chờ "chuyện gì đó" xảy ra','Bạn từng đẩy người mình yêu ra xa, chỉ để xem họ có ở lại không','Bạn khao khát được thấu hiểu, nhưng đồng thời sợ bị nhìn thấu'],
+      roots:'Phong cách hỗn loạn thường gắn với những trải nghiệm mà nơi lẽ ra an toàn nhất lại là nơi gây tổn thương — yêu thương và nỗi sợ đến từ cùng một chỗ. Trái tim bạn học cách vừa tiến vừa lùi để tự bảo vệ. Đây là phong cách vất vả nhất, nhưng cũng là nơi hành trình chữa lành tạo ra thay đổi rõ rệt nhất.',
+      strengths:['Sâu sắc, giàu cảm xúc và giàu sự thấu cảm','Hiểu rõ nỗi đau nên dễ đồng cảm với người khác','Khi tháo được nút thắt, tình yêu của bạn rất bền chặt'],
+      partnerNote:'Điều bạn cần nhất là sự kiên định — một người không bỏ đi khi bạn vô thức đẩy họ ra. Nhưng người yêu bạn cũng cần được biết chuyện gì đang diễn ra trong bạn, dù bạn chỉ nói được một phần. Một phần cũng là bắt đầu.',
+      growth:'Hãy cho bản thân thời gian và sự kiên nhẫn. Nếu cảm thấy quá khó để tự mình tháo gỡ, trò chuyện cùng một chuyên gia tâm lý có thể giúp bạn gỡ dần từng nút thắt.',
+      compat:{
+        secure:  {h:5, t:'Sự kiên định, khó lay chuyển của người an toàn chính là môi trường tốt nhất để bạn học lại niềm tin.'},
+        anxious: {h:3, t:'Hai trái tim nhạy cảm, dễ đồng cảm sâu sắc — nhưng nỗi sợ của người này dễ kích hoạt nỗi sợ của người kia.'},
+        avoidant:{h:3, t:'Khoảng cách của họ có lúc giúp bạn thấy an toàn, có lúc lại chạm vào nỗi sợ bị bỏ rơi. Ranh giới rõ ràng sẽ giúp ích nhiều.'},
+        fearful: {h:2, t:'Hai người hiểu nhau đến đau lòng, nhưng dễ cùng nhau chao đảo. Nếu cả hai cùng cam kết chữa lành, đây có thể là mối gắn kết sâu sắc hiếm có.'}
+      }
+    }
+  };
+
+  var THREAD_PATHS = {
+    intro:   'M40,70 C 140,30 260,110 360,70',
+    secure:  'M40,70 C 140,30 260,110 360,70',
+    anxious: 'M40,70 C 70,20 90,120 120,70 C150,20 170,120 200,70 C230,20 250,120 280,70 C310,20 330,120 360,70',
+    avoidant:'M40,70 C 150,132 250,132 360,70',
+    fearful: 'M40,70 C 100,70 130,18 172,55 C 200,82 148,98 182,68 C 212,38 262,40 282,70 C 302,100 330,50 360,70'
+  };
+
+  /* ---------------- STATE ---------------- */
+
+  var state = {
+    view:'intro',
+    index:0,
+    answers:{},
+    childAnswers:{},
+    triAnswers:{}
+  };
+
+  var app = document.getElementById('app');
+
+  /* ---------------- VISIT COUNTER ---------------- */
+
+  var visitCount = null;
+
+  function updateVisitBadges(){
+    var badges = document.querySelectorAll('.visit-badge');
+    for(var i=0;i<badges.length;i++){
+      if(visitCount === null){
+        badges[i].classList.add('hidden');
+      } else {
+        badges[i].classList.remove('hidden');
+        badges[i].innerHTML = '<span class="heart">&#10084;</span> <span><strong>' +
+          visitCount.toLocaleString('vi-VN') + '</strong> lượt truy cập</span>';
+      }
+    }
+  }
+
+  async function initVisitCounter(){
+    if(!window.storage) return; // môi trường không hỗ trợ: ẩn badge
+    var count = 0;
+    try{
+      var res = await window.storage.get('visit-count', true);
+      if(res && res.value) count = parseInt(res.value, 10) || 0;
+    }catch(e){ /* key chưa tồn tại */ }
+    count += 1;
+    try{
+      await window.storage.set('visit-count', String(count), true);
+      visitCount = count;
+      updateVisitBadges();
+    }catch(e){
+      console.error('Không lưu được lượt truy cập:', e);
+    }
+  }
+
+  /* ---------------- SOUND ENGINE (Web Audio, không cần file ngoài) ---------------- */
+
+  var sound = {
+    enabled: true,
+    ctx: null,
+
+    ensure: function(){
+      if(!this.ctx){
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if(!AC) return null;
+        this.ctx = new AC();
+      }
+      if(this.ctx.state === 'suspended') this.ctx.resume();
+      return this.ctx;
+    },
+
+    tone: function(freq, opts){
+      if(!this.enabled) return;
+      var ctx = this.ensure();
+      if(!ctx) return;
+      opts = opts || {};
+      var t0 = ctx.currentTime + (opts.delay || 0);
+      var dur = opts.dur || 0.12;
+      var osc = ctx.createOscillator();
+      var gain = ctx.createGain();
+      osc.type = opts.type || 'sine';
+      osc.frequency.setValueAtTime(freq, t0);
+      if(opts.glideTo){
+        osc.frequency.exponentialRampToValueAtTime(opts.glideTo, t0 + dur);
+      }
+      var vol = opts.vol || 0.12;
+      gain.gain.setValueAtTime(0.0001, t0);
+      gain.gain.exponentialRampToValueAtTime(vol, t0 + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start(t0);
+      osc.stop(t0 + dur + 0.05);
+    },
+
+    // Chọn đáp án: tiếng "pop" ấm, cao độ tăng dần theo mức 1→5
+    select: function(value){
+      var base = 392; // G4
+      var scale = [1, 9/8, 5/4, 3/2, 5/3]; // thang ngũ cung — quãng nào cũng êm tai
+      this.tone(base * scale[(value-1) || 0], {type:'sine', dur:0.14, vol:0.14});
+      this.tone(base * scale[(value-1) || 0] * 2, {type:'sine', dur:0.10, vol:0.045});
+    },
+
+    // Chuyển câu: tiếng lướt nhẹ đi lên như lật trang
+    next: function(){
+      this.tone(330, {type:'sine', dur:0.18, vol:0.07, glideTo:660});
+    },
+
+    // Quay lại: lướt nhẹ đi xuống
+    back: function(){
+      this.tone(520, {type:'sine', dur:0.15, vol:0.06, glideTo:300});
+    },
+
+    // Bắt đầu: hai nốt mời gọi
+    start: function(){
+      this.tone(523.25, {dur:0.12, vol:0.11});             // C5
+      this.tone(659.25, {dur:0.16, vol:0.11, delay:0.10}); // E5
+    },
+
+    // Kết quả: hợp âm rải ấm áp
+    result: function(){
+      var notes = [523.25, 659.25, 783.99, 1046.5]; // C5 E5 G5 C6
+      for(var i=0;i<notes.length;i++){
+        this.tone(notes[i], {dur:0.34, vol:0.09, delay:i*0.13});
+      }
+    }
+  };
+
+  function mountSoundToggle(){
+    var btn = document.createElement('button');
+    btn.className = 'sound-toggle';
+    btn.type = 'button';
+    function refresh(){
+      btn.innerHTML = sound.enabled ? '&#128266;' : '&#128263;';
+      btn.setAttribute('aria-label', sound.enabled ? 'Tắt âm thanh' : 'Bật âm thanh');
+      btn.title = sound.enabled ? 'Tắt âm thanh' : 'Bật âm thanh';
+    }
+    btn.addEventListener('click', function(){
+      sound.enabled = !sound.enabled;
+      if(sound.enabled) sound.select(3); // phát thử để xác nhận đã bật
+      refresh();
+    });
+    refresh();
+    document.body.appendChild(btn);
+  }
+
+  /* ---------------- HELPERS ---------------- */
+
+  function el(tag, cls, html){
+    var e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(html !== undefined) e.innerHTML = html;
+    return e;
+  }
+
+  function threadSVG(pathKey, opts){
+    opts = opts || {};
+    var d = THREAD_PATHS[pathKey];
+    var stroke = opts.stroke || 'var(--rose)';
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns,'svg');
+    svg.setAttribute('viewBox','0 0 400 140');
+    svg.setAttribute('aria-hidden','true');
+
+    var path = document.createElementNS(ns,'path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke', stroke);
+    path.setAttribute('stroke-width','2.5');
+    path.setAttribute('stroke-linecap','round');
+    path.setAttribute('stroke-dasharray','900');
+    path.setAttribute('stroke-dashoffset','900');
+    path.style.transition = 'stroke-dashoffset 1.3s ease';
+    svg.appendChild(path);
+
+    [{cx:40, label:'Bạn', fill:'var(--rose)'}, {cx:360, label:'Người ấy', fill:'var(--lavender)'}].forEach(function(p){
+      var c = document.createElementNS(ns,'circle');
+      c.setAttribute('cx', p.cx); c.setAttribute('cy',70); c.setAttribute('r',7);
+      c.setAttribute('fill', p.fill);
+      svg.appendChild(c);
+      var t = document.createElementNS(ns,'text');
+      t.setAttribute('x', p.cx); t.setAttribute('y', 104);
+      t.setAttribute('text-anchor','middle');
+      t.setAttribute('class','thread-label');
+      t.textContent = p.label;
+      svg.appendChild(t);
+    });
+
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ path.setAttribute('stroke-dashoffset','0'); });
+    });
+
+    return svg;
+  }
+
+  function triangleSVG(tri){
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns,'svg');
+    svg.setAttribute('viewBox','0 0 320 300');
+    svg.setAttribute('aria-hidden','true');
+
+    // Ba đỉnh cố định của tam giác khung
+    var cx = 160, top = 44, bl = {x:44, y:250}, br = {x:276, y:250};
+    var apex = {x:cx, y:top};
+    var verts = {
+      intimacy:   apex,          // đỉnh trên
+      passion:    bl,            // đáy trái
+      commitment: br             // đáy phải
+    };
+    var center = {x:cx, y:(top + 250 + 250)/3};
+
+    // Khung tam giác mờ
+    var frame = document.createElementNS(ns,'polygon');
+    frame.setAttribute('points', apex.x+','+apex.y+' '+bl.x+','+bl.y+' '+br.x+','+br.y);
+    frame.setAttribute('fill','none');
+    frame.setAttribute('stroke','var(--line)');
+    frame.setAttribute('stroke-width','1.5');
+    frame.setAttribute('stroke-dasharray','4 4');
+    svg.appendChild(frame);
+
+    // Tam giác "thực" theo điểm số: nội suy mỗi đỉnh về tâm theo tỷ lệ %
+    function lerp(v, p){ // p là 0..1
+      return {x: center.x + (v.x - center.x)*p, y: center.y + (v.y - center.y)*p};
+    }
+    var pI = lerp(verts.intimacy,   Math.max(tri.intimacy,8)/100);
+    var pP = lerp(verts.passion,    Math.max(tri.passion,8)/100);
+    var pC = lerp(verts.commitment, Math.max(tri.commitment,8)/100);
+
+    var filled = document.createElementNS(ns,'polygon');
+    filled.setAttribute('points', pI.x+','+pI.y+' '+pP.x+','+pP.y+' '+pC.x+','+pC.y);
+    filled.setAttribute('fill','rgba(206,93,130,0.18)');
+    filled.setAttribute('stroke','var(--rose)');
+    filled.setAttribute('stroke-width','2.5');
+    filled.setAttribute('stroke-linejoin','round');
+    filled.style.opacity = '0';
+    filled.style.transition = 'opacity .8s ease';
+    svg.appendChild(filled);
+
+    // Điểm ở mỗi đỉnh thực
+    [pI, pP, pC].forEach(function(p){
+      var c = document.createElementNS(ns,'circle');
+      c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); c.setAttribute('r', 4);
+      c.setAttribute('fill','var(--rose)');
+      svg.appendChild(c);
+    });
+
+    // Nhãn ba đỉnh + %
+    var labels = [
+      {v:apex, key:'intimacy',   anchor:'middle', dy:-14, pdy:-1},
+      {v:bl,   key:'passion',    anchor:'middle', dy:22,  pdy:38},
+      {v:br,   key:'commitment', anchor:'middle', dy:22,  pdy:38}
+    ];
+    labels.forEach(function(l){
+      var t = document.createElementNS(ns,'text');
+      t.setAttribute('x', l.v.x); t.setAttribute('y', l.v.y + l.dy);
+      t.setAttribute('text-anchor', l.anchor);
+      t.setAttribute('class','tri-vertex-label');
+      t.textContent = TRI_META[l.key];
+      svg.appendChild(t);
+      var p = document.createElementNS(ns,'text');
+      p.setAttribute('x', l.v.x); p.setAttribute('y', l.v.y + l.pdy);
+      p.setAttribute('text-anchor', l.anchor);
+      p.setAttribute('class','tri-vertex-pct');
+      p.textContent = tri[l.key] + '%';
+      svg.appendChild(p);
+    });
+
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ filled.style.opacity = '1'; });
+    });
+
+    return svg;
+  }
+
+  /* ---------------- RENDER: INTRO ---------------- */
+
+  function renderIntro(){
+    app.innerHTML = '';
+    var s = el('div','screen');
+
+    var badge = el('div','visit-badge hidden','');
+    s.appendChild(badge);
+
+    s.appendChild(el('div','eyebrow','Trắc nghiệm tâm lý'));
+    var title = el('h1','intro-title','Xu Hướng Gắn Bó <em>Trong Tình Yêu</em>');
+    s.appendChild(title);
+    s.appendChild(el('p','intro-sub','Cách bạn yêu, cách bạn phản ứng khi gần gũi hay xa cách — phần lớn được định hình từ những trải nghiệm gắn bó đầu đời. Bắt đầu bằng vài câu nhẹ nhàng về tuổi thơ, rồi tới cách bạn yêu hôm nay, và cuối cùng là tam giác tình yêu của bạn — để khám phá không chỉ phong cách gắn bó, mà cả hình dạng tình yêu bạn đang xây dựng.'));
+
+    var threadWrap = el('div','thread-wrap');
+    threadWrap.appendChild(threadSVG('intro'));
+    s.appendChild(threadWrap);
+
+    var cta = el('button','cta','Bắt đầu khảo sát →');
+    cta.addEventListener('click', function(){
+      sound.start();
+      state.view = 'quiz'; state.index = 0; render();
+    });
+    s.appendChild(cta);
+
+    var meta = el('div','meta-row','29 câu hỏi <span class="dot"></span> khoảng 6–8 phút <span class="dot"></span> hoàn toàn riêng tư');
+    s.appendChild(meta);
+
+    app.appendChild(s);
+  }
+
+  /* ---------------- RENDER: QUIZ ---------------- */
+
+  var quizShell = null;     // khung cố định: thanh tiến trình + vùng thẻ + nút quay lại
+  var transitioning = false; // chặn bấm liên tiếp trong lúc thẻ đang trượt
+
+  function goForward(){
+    var nChild = CHILD_QUESTIONS.length;
+    var TOTAL = nChild + QUESTIONS.length + TRIANGLE_QUESTIONS.length;
+    if(state.index < TOTAL - 1){
+      var crossingToGrowth = (state.index === nChild - 1); // vừa xong câu tuổi thơ cuối
+      setTimeout(function(){
+        sound.next();
+        state.index++;
+        renderQuiz(crossingToGrowth ? 'interlude' : 'fwd');
+      }, 170);
+    } else {
+      setTimeout(function(){ state.view = 'result'; render(); sound.result(); }, 220);
+    }
+  }
+
+  function buildQuizShell(){
+    app.innerHTML = '';
+    var s = el('div','screen');
+
+    var header = el('div','quiz-header');
+    var track = el('div','progress-track');
+    var fill = el('div','progress-fill');
+    var bead = el('div','progress-bead');
+    track.appendChild(fill); track.appendChild(bead);
+    header.appendChild(track);
+    var ptext = el('div','progress-text','');
+    header.appendChild(ptext);
+    s.appendChild(header);
+
+    var holder = el('div','card-holder');
+    s.appendChild(holder);
+
+    var nav = el('div','quiz-nav');
+    var back = el('button','back-btn','← Quay lại');
+    back.addEventListener('click', function(){
+      if(transitioning || state.index === 0) return;
+      sound.back();
+      state.index--;
+      renderQuiz('back');
+    });
+    nav.appendChild(back);
+    s.appendChild(nav);
+
+    app.appendChild(s);
+    quizShell = {screen:s, fill:fill, bead:bead, ptext:ptext, holder:holder, back:back};
+  }
+
+  function swapCard(newCard, direction){
+    var holder = quizShell.holder;
+    var old = holder.firstChild;
+    transitioning = true;
+
+    function enter(){
+      newCard.classList.add(direction === 'back' ? 'card-enter-back' : 'card-enter');
+      holder.appendChild(newCard);
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+          newCard.classList.remove('card-enter','card-enter-back');
+          setTimeout(function(){ transitioning = false; }, 240);
+        });
+      });
+    }
+
+    if(old){
+      old.classList.add(direction === 'back' ? 'card-exit-back' : 'card-exit');
+      setTimeout(function(){
+        holder.innerHTML = '';
+        enter();
+      }, 190);
+    } else {
+      enter();
+    }
+  }
+
+  function buildInterludeCard(){
+    var d = el('div','interlude card-anim');
+    d.appendChild(el('div','interlude-icon','&#127793;'));
+    d.appendChild(el('div','interlude-big','Bây giờ cùng tìm hiểu quá trình trưởng thành nhé'));
+    d.appendChild(el('div','interlude-sub','Cảm ơn bạn đã chia sẻ về tuổi thơ của mình &#128155;'));
+    return d;
+  }
+
+  function buildQuestionCard(){
+    var nChild = CHILD_QUESTIONS.length, nMain = QUESTIONS.length;
+    var phase = state.index < nChild ? 'child' : (state.index < nChild + nMain ? 'main' : 'tri');
+    var card = el('div','question-card card-anim');
+
+    if(phase === 'child'){
+      var cq = CHILD_QUESTIONS[state.index];
+      card.appendChild(el('div','question-num','MỘT CHÚT VỀ TUỔI THƠ CỦA BẠN'));
+      card.appendChild(el('div','question-text', cq.text));
+
+      var list = el('div','choice-list');
+      cq.options.forEach(function(opt, oi){
+        var btn = el('button','choice-btn', opt.text);
+        if(state.childAnswers[cq.id] === opt.style) btn.classList.add('selected');
+        btn.addEventListener('click', function(){
+          if(transitioning) return;
+          state.childAnswers[cq.id] = opt.style;
+          var sel = list.querySelector('.selected');
+          if(sel) sel.classList.remove('selected');
+          btn.classList.add('selected');
+          sound.select(oi + 1);
+          goForward();
+        });
+        list.appendChild(btn);
+      });
+      card.appendChild(list);
+      card.appendChild(el('div','soft-note','Không có câu trả lời đúng hay sai. Hãy chọn điều gần với ký ức của bạn nhất — nếu khó chọn, cứ tin vào cảm giác đầu tiên. Bạn đã lớn lên và đã làm rất tốt rồi.'));
+    } else {
+      var q, label, store;
+      if(phase === 'main'){
+        q = QUESTIONS[state.index - nChild];
+        label = 'MỨC ĐỘ ĐỒNG Ý CỦA BẠN';
+        store = state.answers;
+      } else {
+        q = TRIANGLE_QUESTIONS[state.index - nChild - nMain];
+        label = 'TAM GIÁC TÌNH YÊU CỦA BẠN';
+        store = state.triAnswers;
+      }
+      card.appendChild(el('div','question-num', label));
+      card.appendChild(el('div','question-text', q.text));
+
+      var likert = el('div','likert');
+      var labels = ['Hoàn toàn\nkhông đồng ý','','','','Hoàn toàn\nđồng ý'];
+      for(var i=1;i<=5;i++){
+        (function(val){
+          var col = el('div','likert-col');
+          var btn = el('button','likert-btn', String(val));
+          if(store[q.id] === val) btn.classList.add('selected');
+          btn.addEventListener('click', function(){
+            if(transitioning) return;
+            store[q.id] = val;
+            var sel = likert.querySelector('.selected');
+            if(sel) sel.classList.remove('selected');
+            btn.classList.add('selected');
+            sound.select(val);
+            goForward();
+          });
+          col.appendChild(btn);
+          var cap = el('div','likert-caption', labels[val-1].replace('\n','<br>'));
+          col.appendChild(cap);
+          likert.appendChild(col);
+        })(i);
+      }
+      card.appendChild(likert);
+      if(phase === 'tri' && state.index === nChild + nMain){
+        card.appendChild(el('div','soft-note','Phần cuối cùng! Nếu bạn đang độc thân, hãy trả lời dựa trên mối quan hệ gần nhất hoặc cách bạn hình dung về tình yêu của mình.'));
+      }
+    }
+    return card;
+  }
+
+  function renderQuiz(direction){
+    direction = direction || 'fwd';
+    if(!quizShell || !quizShell.screen.isConnected){
+      buildQuizShell();
+    }
+    var TOTAL = CHILD_QUESTIONS.length + QUESTIONS.length + TRIANGLE_QUESTIONS.length;
+
+    // Cập nhật tiến trình trên khung cố định — CSS transition tự làm mượt
+    var pct = (state.index) / TOTAL * 100;
+    quizShell.fill.style.width = pct + '%';
+    quizShell.bead.style.left = pct + '%';
+    quizShell.ptext.textContent = 'Câu ' + (state.index+1) + ' / ' + TOTAL;
+    quizShell.back.disabled = (state.index === 0);
+
+    if(direction === 'interlude'){
+      var inter = buildInterludeCard();
+      swapCard(inter, 'fwd');
+      // Tự chuyển sang câu hỏi sau khoảng dừng ngắn (bỏ qua nếu người dùng đã bấm Quay lại)
+      setTimeout(function(){
+        if(state.view === 'quiz' && quizShell && quizShell.holder.contains(inter)){
+          renderQuiz('fwd');
+        }
+      }, 1800);
+      return;
+    }
+
+    swapCard(buildQuestionCard(), direction);
+    if(window.scrollY > 60) window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  /* ---------------- SCORING ---------------- */
+
+  function computeScores(){
+    var earned   = {secure:0,  anxious:0,  avoidant:0,  fearful:0};
+    var possible = {secure:25, anxious:25, avoidant:25, fearful:25};
+    QUESTIONS.forEach(function(q){
+      var v = state.answers[q.id] || 3;
+      earned[q.style] += v;
+    });
+    // Mỗi câu tuổi thơ = một "mục" trọn điểm cho phong cách được chọn,
+    // cộng vào cả tử và mẫu để chỉ nâng nhẹ chứ không lấn át 20 câu chính
+    CHILD_QUESTIONS.forEach(function(cq){
+      var st = state.childAnswers[cq.id];
+      if(st){ earned[st] += 5; possible[st] += 5; }
+    });
+    var pct = {};
+    Object.keys(earned).forEach(function(k){
+      pct[k] = Math.round((earned[k] / possible[k]) * 100);
+    });
+    var order = ['secure','anxious','avoidant','fearful'];
+    var sorted = order.slice().sort(function(a,b){ return pct[b] - pct[a]; });
+    var top = sorted[0];
+    var secondary = sorted[1];
+
+    // Tam giác tình yêu Sternberg: mỗi đỉnh từ 2 câu (tối đa 10 điểm)
+    var triEarned = {intimacy:0, passion:0, commitment:0};
+    TRIANGLE_QUESTIONS.forEach(function(q){
+      triEarned[q.comp] += (state.triAnswers[q.id] || 3);
+    });
+    var tri = {};
+    Object.keys(triEarned).forEach(function(k){
+      tri[k] = Math.round((triEarned[k] / 10) * 100);
+    });
+    // Phân loại theo 8 kiểu tình yêu: đỉnh > 65% mới được xem là "cao"
+    // (mức trung lập 3/5 = 60% nên không vô tình bị tính là đỉnh mạnh)
+    var hi = function(v){ return v > 65; };
+    var loveKey = (hi(tri.intimacy)?'I':'') + (hi(tri.passion)?'P':'') + (hi(tri.commitment)?'C':'');
+
+    return {pct:pct, top:top, secondary:secondary, tri:tri, loveKey:loveKey};
+  }
+
+  /* ---------------- RENDER: RESULT ---------------- */
+
+  function renderResult(){
+    app.innerHTML = '';
+    var s = el('div','screen');
+    var scored = computeScores();
+    var top = scored.top;
+    var r = RESULTS[top];
+
+    s.appendChild(el('div','result-eyebrow','Kết quả của bạn'));
+    s.appendChild(el('h2','result-title', r.title));
+    s.appendChild(el('p','result-subtitle', r.subtitle));
+
+    var threadWrap = el('div','thread-wrap result-thread');
+    threadWrap.appendChild(threadSVG(top, {stroke:'var(--rose)'}));
+    s.appendChild(threadWrap);
+
+    s.appendChild(el('p','result-desc', r.desc));
+
+    var secLine = el('div','secondary-line');
+    secLine.innerHTML = 'Không ai bị đóng khung trong một nhãn duy nhất. Phong cách <strong>' +
+      STYLE_META[top].label + '</strong> là phản ứng chủ đạo của bạn, nhưng khi mối quan hệ căng thẳng, xu hướng <strong>' +
+      STYLE_META[scored.secondary].label + '</strong> trong bạn có thể được kích hoạt. Hiểu cả hai giúp bạn nhẹ nhàng hơn với chính mình.';
+    s.appendChild(secLine);
+
+    var barsWrap = el('div','bars');
+    barsWrap.appendChild(el('div','section-label','Phân bố phong cách gắn bó của bạn'));
+    ['secure','anxious','avoidant','fearful'].forEach(function(k){
+      var row = el('div','bar-row');
+      var top2 = el('div','bar-top');
+      var left = el('span', null, STYLE_META[k].label);
+      var right = el('span', null, scored.pct[k] + '%');
+      top2.appendChild(left); top2.appendChild(right);
+      row.appendChild(top2);
+      var track = el('div','bar-track');
+      var fill = el('div','bar-fill');
+      fill.style.background = STYLE_META[k].color;
+      fill.style.width = '0%';
+      track.appendChild(fill);
+      row.appendChild(track);
+      barsWrap.appendChild(row);
+      setTimeout(function(){ fill.style.width = scored.pct[k] + '%'; }, 60);
+    });
+    s.appendChild(barsWrap);
+
+    var signsCard = el('div','card-block');
+    signsCard.appendChild(el('div','section-label','Biểu hiện thường gặp ở bạn'));
+    var sul = el('ul');
+    r.signs.forEach(function(txt){ sul.appendChild(el('li', null, txt)); });
+    signsCard.appendChild(sul);
+    s.appendChild(signsCard);
+
+    var strengthCard = el('div','card-block');
+    strengthCard.appendChild(el('div','section-label','Điểm mạnh của bạn'));
+    var ul = el('ul');
+    r.strengths.forEach(function(txt){ ul.appendChild(el('li', null, txt)); });
+    strengthCard.appendChild(ul);
+    s.appendChild(strengthCard);
+
+    var rootsCard = el('div','card-block');
+    rootsCard.appendChild(el('div','section-label','Gốc rễ hình thành'));
+    rootsCard.appendChild(el('p', null, r.roots));
+    s.appendChild(rootsCard);
+
+    var partnerCard = el('div','card-block');
+    partnerCard.appendChild(el('div','section-label','Điều người yêu bạn nên biết'));
+    partnerCard.appendChild(el('p', null, r.partnerNote));
+    s.appendChild(partnerCard);
+
+    var compatCard = el('div','card-block');
+    compatCard.appendChild(el('div','section-label','Độ hợp với các phong cách khác'));
+    ['secure','anxious','avoidant','fearful'].forEach(function(k){
+      var c = r.compat[k];
+      var row = el('div','compat-row');
+      var head = el('div','compat-head');
+      head.appendChild(el('span','compat-name','+ ' + STYLE_META[k].label));
+      var hearts = '';
+      for(var hi=1; hi<=5; hi++){
+        hearts += '<span class="' + (hi <= c.h ? 'on' : 'off') + '">&#10084;</span>';
+      }
+      head.appendChild(el('span','compat-hearts', hearts));
+      row.appendChild(head);
+      row.appendChild(el('p','compat-text', c.t));
+      compatCard.appendChild(row);
+    });
+    s.appendChild(compatCard);
+
+    var triCard = el('div','card-block');
+    triCard.appendChild(el('div','section-label','Tam giác tình yêu của bạn'));
+    var tnote = TRIANGLE_NOTES[top];
+    triCard.appendChild(el('p', null, tnote.intro));
+    var triWrap = el('div','triangle-wrap');
+    triWrap.appendChild(triangleSVG(scored.tri));
+    triCard.appendChild(triWrap);
+    var lt = LOVE_TYPES[scored.loveKey] || LOVE_TYPES[''];
+    triCard.appendChild(el('div','lovetype-name', lt.name));
+    triCard.appendChild(el('p', null, lt.d));
+    var tul = el('ul');
+    tnote.items.forEach(function(txt){ tul.appendChild(el('li', null, txt)); });
+    tul.style.marginTop = '14px';
+    triCard.appendChild(tul);
+    s.appendChild(triCard);
+
+    var growthCard = el('div','card-block');
+    growthCard.appendChild(el('div','section-label','Gợi ý để phát triển'));
+    growthCard.appendChild(el('p', null, r.growth));
+    s.appendChild(growthCard);
+
+    var concl = el('div','conclusion');
+    concl.appendChild(el('div','section-label','Gắn bó không phải là một án chung thân'));
+    var p1 = el('p');
+    p1.innerHTML = 'Phong cách gắn bó không định sẵn số phận tình yêu của bạn. Nó chỉ là điểm khởi đầu — một tấm bản đồ vẽ nên từ quá khứ, chứ không phải bản án cho tương lai.';
+    concl.appendChild(p1);
+    var p2 = el('p');
+    p2.innerHTML = 'Các nhà tâm lý học gọi hành trình chuyển dịch về phía an toàn là <strong>"An toàn tự tạo" (Earned Security)</strong>. Dù bạn thuộc kiểu nào, bạn hoàn toàn có thể tiến gần hơn tới sự an toàn — bằng cách bước vào một mối quan hệ với người an toàn, thực hành nhận thức về cảm xúc của mình, và học cách giao tiếp rõ ràng thay vì phản ứng theo nỗi sợ cũ.';
+    concl.appendChild(p2);
+    var p3 = el('p');
+    p3.innerHTML = 'Hãy nuôi dưỡng sự <strong>Thân mật</strong> bằng cách tôn trọng ranh giới, giữ ngọn lửa <strong>Đam mê</strong> bằng sự thấu hiểu, và xây <strong>Cam kết</strong> từ sự trưởng thành của lý trí. Ba đỉnh ấy, khi cân bằng, chính là hình dạng của một tình yêu trọn vẹn.';
+    concl.appendChild(p3);
+    s.appendChild(concl);
+
+    s.appendChild(el('div','disclaimer','Đây là bài trắc nghiệm mang tính tham khảo, xây dựng dựa trên Lý thuyết gắn bó (Bowlby & Ainsworth) và Tam giác tình yêu của Robert Sternberg. Kết quả không phải là chẩn đoán và không thay thế cho đánh giá hay tư vấn từ chuyên gia tâm lý.'));
+
+    var restart = el('button','restart-btn','Làm lại khảo sát');
+    restart.addEventListener('click', function(){
+      sound.back();
+      state.view='intro'; state.index=0; state.answers={}; state.childAnswers={}; state.triAnswers={}; render();
+    });
+    s.appendChild(restart);
+
+    app.appendChild(s);
+  }
+
+  /* ---------------- ROUTER ---------------- */
+
+  function render(){
+    if(state.view === 'intro') renderIntro();
+    else if(state.view === 'quiz') renderQuiz();
+    else renderResult();
+    updateVisitBadges();
+    window.scrollTo({top:0, behavior:'instant'});
+  }
+
+  render();
+  mountSoundToggle();
+  initVisitCounter();
+})();
+</script>
+</body>
+</html>
