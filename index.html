@@ -193,6 +193,31 @@
   }
   .sound-toggle:hover{transform:scale(1.08);}
 
+  .lang-toggle{
+    position:fixed;
+    top:16px;
+    right:66px;
+    z-index:50;
+    appearance:none;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(4px);
+    cursor:pointer;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    font-size:12.5px;
+    font-weight:800;
+    letter-spacing:0.03em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--ink);
+    box-shadow:0 4px 14px -6px rgba(58,42,61,0.25);
+    transition:transform .15s ease;
+  }
+  .lang-toggle:hover{transform:scale(1.08);}
+
   /* ---------- QUIZ ---------- */
   .quiz-header{margin-bottom:30px;}
   .progress-track{
@@ -551,79 +576,79 @@
   var CHILD_QUESTIONS = [
     {
       id:'c1',
-      text:'Khi còn nhỏ, mỗi lần bạn buồn hay khóc, điều thường xảy ra là…',
+      text:'Khi còn nhỏ, mỗi lần bạn buồn hay khóc, điều thường xảy ra là…', en:"When you were little and felt sad or cried, what usually happened?",
       options:[
-        {style:'secure',   text:'Có người lại gần, lắng nghe và dỗ dành mình'},
-        {style:'avoidant', text:'Mình thường tự nín, tự vượt qua một mình'},
-        {style:'anxious',  text:'Lúc được dỗ dành, lúc bị bỏ mặc — mình không đoán trước được'},
-        {style:'fearful',  text:'Mình vừa muốn được dỗ, vừa sợ làm người lớn phiền lòng'}
+        {style:'secure',   text:'Có người lại gần, lắng nghe và dỗ dành mình', en:"Someone came close, listened, and comforted me"},
+        {style:'avoidant', text:'Mình thường tự nín, tự vượt qua một mình', en:"I usually held it in and got through it on my own"},
+        {style:'anxious',  text:'Lúc được dỗ dành, lúc bị bỏ mặc — mình không đoán trước được', en:"Sometimes I was comforted, sometimes left alone — I could never predict"},
+        {style:'fearful',  text:'Mình vừa muốn được dỗ, vừa sợ làm người lớn phiền lòng', en:"I wanted comfort, but was afraid of troubling the grown-ups"}
       ]
     },
     {
       id:'c2',
-      text:'Ký ức của bạn về không khí trong nhà thời thơ ấu gần với điều nào nhất?',
+      text:'Ký ức của bạn về không khí trong nhà thời thơ ấu gần với điều nào nhất?', en:"Which best matches your memory of the atmosphere at home growing up?",
       options:[
-        {style:'anxious',  text:'Yêu thương có đó, nhưng mình luôn phải cố gắng để được chú ý'},
-        {style:'secure',   text:'Ấm áp và ổn định — nhà là nơi mình thấy an toàn'},
-        {style:'fearful',  text:'Khó đoán — có ngày rất vui, có ngày mình chỉ muốn thu nhỏ lại'},
-        {style:'avoidant', text:'Mọi người ít nói về cảm xúc — ai cũng tự lo phần mình'}
+        {style:'anxious',  text:'Yêu thương có đó, nhưng mình luôn phải cố gắng để được chú ý', en:"Love was there, but I always had to try hard to be noticed"},
+        {style:'secure',   text:'Ấm áp và ổn định — nhà là nơi mình thấy an toàn', en:"Warm and stable — home was where I felt safe"},
+        {style:'fearful',  text:'Khó đoán — có ngày rất vui, có ngày mình chỉ muốn thu nhỏ lại', en:"Unpredictable — some days were joyful, some days I just wanted to shrink away"},
+        {style:'avoidant', text:'Mọi người ít nói về cảm xúc — ai cũng tự lo phần mình', en:"Feelings were rarely talked about — everyone managed on their own"}
       ]
     },
     {
       id:'c3',
-      text:'Hồi nhỏ, khi có chuyện vui hay điều gì muốn khoe, bạn thường…',
+      text:'Hồi nhỏ, khi có chuyện vui hay điều gì muốn khoe, bạn thường…', en:"As a kid, when something exciting happened that you wanted to share, you would…",
       options:[
-        {style:'avoidant', text:'Giữ cho riêng mình, hoặc chỉ kể khi được hỏi'},
-        {style:'fearful',  text:'Muốn kể lắm, nhưng chần chừ vì không biết sẽ được đón nhận ra sao'},
-        {style:'secure',   text:'Chạy đi kể ngay, vì biết sẽ có người vui cùng mình'},
-        {style:'anxious',  text:'Kể và rất mong được khen — nếu bị lơ đi, mình buồn rất lâu'}
+        {style:'avoidant', text:'Giữ cho riêng mình, hoặc chỉ kể khi được hỏi', en:"Keep it to myself, or only tell when asked"},
+        {style:'fearful',  text:'Muốn kể lắm, nhưng chần chừ vì không biết sẽ được đón nhận ra sao', en:"Want to tell so much, yet hesitate, unsure how it would be received"},
+        {style:'secure',   text:'Chạy đi kể ngay, vì biết sẽ có người vui cùng mình', en:"Run to tell someone right away, knowing they would be happy with me"},
+        {style:'anxious',  text:'Kể và rất mong được khen — nếu bị lơ đi, mình buồn rất lâu', en:"Tell and really hope for praise — being ignored would hurt for a long time"}
       ]
     }
   ];
 
   var TRIANGLE_QUESTIONS = [
-    {id:'t1', comp:'intimacy',   text:'Tôi có thể chia sẻ những điều sâu kín nhất với người mình yêu mà không sợ bị phán xét.'},
-    {id:'t2', comp:'passion',    text:'Sự rung động và sức hút với người ấy vẫn là một phần sống động trong tôi.'},
-    {id:'t3', comp:'commitment', text:'Tôi chủ động lựa chọn gắn bó lâu dài, kể cả khi mối quan hệ đi qua giai đoạn khó khăn.'},
-    {id:'t4', comp:'intimacy',   text:'Tôi cảm thấy người ấy thực sự hiểu con người thật của tôi — kể cả những góc chưa hoàn hảo.'},
-    {id:'t5', comp:'passion',    text:'Sự lãng mạn với tôi không chỉ ở giai đoạn đầu — tôi muốn giữ lửa cho nó lâu dài.'},
-    {id:'t6', comp:'commitment', text:'Với tôi, cùng nhau đi qua cả những ngày nhạt nhòa cũng là một phần của tình yêu.'}
+    {id:'t1', comp:'intimacy',   text:'Tôi có thể chia sẻ những điều sâu kín nhất với người mình yêu mà không sợ bị phán xét.', en:"I can share my innermost thoughts with the person I love without fear of judgment."},
+    {id:'t2', comp:'passion',    text:'Sự rung động và sức hút với người ấy vẫn là một phần sống động trong tôi.', en:"The spark and attraction I feel for them is still alive in me."},
+    {id:'t3', comp:'commitment', text:'Tôi chủ động lựa chọn gắn bó lâu dài, kể cả khi mối quan hệ đi qua giai đoạn khó khăn.', en:"I actively choose long-term commitment, even when the relationship goes through hard times."},
+    {id:'t4', comp:'intimacy',   text:'Tôi cảm thấy người ấy thực sự hiểu con người thật của tôi — kể cả những góc chưa hoàn hảo.', en:"I feel truly understood by them — even the imperfect parts of me."},
+    {id:'t5', comp:'passion',    text:'Sự lãng mạn với tôi không chỉ ở giai đoạn đầu — tôi muốn giữ lửa cho nó lâu dài.', en:"Romance is not just for the beginning — I want to keep the flame alive for the long run."},
+    {id:'t6', comp:'commitment', text:'Với tôi, cùng nhau đi qua cả những ngày nhạt nhòa cũng là một phần của tình yêu.', en:"To me, getting through the dull days together is also part of love."}
   ];
 
   var QUESTIONS = [
-    {id:1,  style:'secure',   text:'Tôi cảm thấy dễ dàng tin tưởng người yêu mà không cần lo lắng thái quá.'},
-    {id:2,  style:'anxious',  text:'Tôi thường lo lắng rằng người yêu sẽ không còn yêu mình nữa.'},
-    {id:3,  style:'avoidant', text:'Tôi cảm thấy ngột ngạt khi người yêu muốn gần gũi quá mức.'},
-    {id:4,  style:'fearful',  text:'Tôi vừa muốn gần gũi người yêu, vừa sợ bị tổn thương nếu quá thân thiết.'},
-    {id:5,  style:'secure',   text:'Tôi thoải mái chia sẻ cảm xúc thật của mình với người yêu.'},
-    {id:6,  style:'anxious',  text:'Tôi cảm thấy bất an khi người yêu không trả lời tin nhắn ngay.'},
-    {id:7,  style:'avoidant', text:'Tôi thích tự mình giải quyết vấn đề hơn là dựa vào người yêu.'},
-    {id:8,  style:'fearful',  text:'Tôi thường tự mâu thuẫn: lúc muốn ở gần, lúc lại muốn tránh xa.'},
-    {id:9,  style:'secure',   text:'Tôi tin rằng mình xứng đáng được yêu thương và tôn trọng.'},
-    {id:10, style:'anxious',  text:'Tôi cần được người yêu trấn an thường xuyên mới cảm thấy yên tâm.'},
-    {id:11, style:'avoidant', text:'Tôi ngại chia sẻ những cảm xúc sâu kín với người yêu.'},
-    {id:12, style:'fearful',  text:'Tôi khó tin tưởng hoàn toàn vào người yêu, dù rất muốn.'},
-    {id:13, style:'secure',   text:'Tôi có thể vừa gần gũi với người yêu, vừa giữ được không gian riêng cho bản thân.'},
-    {id:14, style:'anxious',  text:'Tôi hay so sánh mối quan hệ của mình với người khác và sợ mình không đủ tốt.'},
-    {id:15, style:'avoidant', text:'Tôi thường giữ khoảng cách khi mối quan hệ trở nên quá thân mật.'},
-    {id:16, style:'fearful',  text:'Tôi sợ bị bỏ rơi, nhưng cũng sợ bị kiểm soát trong tình yêu.'},
-    {id:17, style:'secure',   text:'Khi có mâu thuẫn, tôi tin rằng hai người có thể cùng nhau giải quyết.'},
-    {id:18, style:'anxious',  text:'Tôi dễ nghĩ đến điều tồi tệ nhất khi người yêu có vẻ xa cách.'},
-    {id:19, style:'avoidant', text:'Với tôi, sự độc lập quan trọng hơn là gắn bó chặt chẽ với ai đó.'},
-    {id:20, style:'fearful',  text:'Cảm xúc của tôi trong tình yêu thường thay đổi thất thường, khó đoán.'}
+    {id:1,  style:'secure',   text:'Tôi cảm thấy dễ dàng tin tưởng người yêu mà không cần lo lắng thái quá.', en:"I find it easy to trust my partner without excessive worry."},
+    {id:2,  style:'anxious',  text:'Tôi thường lo lắng rằng người yêu sẽ không còn yêu mình nữa.', en:"I often worry that my partner will stop loving me."},
+    {id:3,  style:'avoidant', text:'Tôi cảm thấy ngột ngạt khi người yêu muốn gần gũi quá mức.', en:"I feel suffocated when my partner wants too much closeness."},
+    {id:4,  style:'fearful',  text:'Tôi vừa muốn gần gũi người yêu, vừa sợ bị tổn thương nếu quá thân thiết.', en:"I want to be close to my partner, yet fear getting hurt if we get too close."},
+    {id:5,  style:'secure',   text:'Tôi thoải mái chia sẻ cảm xúc thật của mình với người yêu.', en:"I feel comfortable sharing my true feelings with my partner."},
+    {id:6,  style:'anxious',  text:'Tôi cảm thấy bất an khi người yêu không trả lời tin nhắn ngay.', en:"I feel uneasy when my partner does not reply to my messages right away."},
+    {id:7,  style:'avoidant', text:'Tôi thích tự mình giải quyết vấn đề hơn là dựa vào người yêu.', en:"I prefer solving problems on my own rather than relying on my partner."},
+    {id:8,  style:'fearful',  text:'Tôi thường tự mâu thuẫn: lúc muốn ở gần, lúc lại muốn tránh xa.', en:"I often contradict myself: one moment I want closeness, the next I want distance."},
+    {id:9,  style:'secure',   text:'Tôi tin rằng mình xứng đáng được yêu thương và tôn trọng.', en:"I believe I deserve to be loved and respected."},
+    {id:10, style:'anxious',  text:'Tôi cần được người yêu trấn an thường xuyên mới cảm thấy yên tâm.', en:"I need frequent reassurance from my partner to feel secure."},
+    {id:11, style:'avoidant', text:'Tôi ngại chia sẻ những cảm xúc sâu kín với người yêu.', en:"I hesitate to share my deepest feelings with my partner."},
+    {id:12, style:'fearful',  text:'Tôi khó tin tưởng hoàn toàn vào người yêu, dù rất muốn.', en:"I find it hard to fully trust my partner, even though I want to."},
+    {id:13, style:'secure',   text:'Tôi có thể vừa gần gũi với người yêu, vừa giữ được không gian riêng cho bản thân.', en:"I can be close to my partner while still keeping space for myself."},
+    {id:14, style:'anxious',  text:'Tôi hay so sánh mối quan hệ của mình với người khác và sợ mình không đủ tốt.', en:"I often compare my relationship with others and fear I am not good enough."},
+    {id:15, style:'avoidant', text:'Tôi thường giữ khoảng cách khi mối quan hệ trở nên quá thân mật.', en:"I tend to keep my distance when the relationship gets too intimate."},
+    {id:16, style:'fearful',  text:'Tôi sợ bị bỏ rơi, nhưng cũng sợ bị kiểm soát trong tình yêu.', en:"I fear being abandoned, but I also fear being controlled in love."},
+    {id:17, style:'secure',   text:'Khi có mâu thuẫn, tôi tin rằng hai người có thể cùng nhau giải quyết.', en:"When conflicts arise, I believe the two of us can work through them together."},
+    {id:18, style:'anxious',  text:'Tôi dễ nghĩ đến điều tồi tệ nhất khi người yêu có vẻ xa cách.', en:"I easily imagine the worst when my partner seems distant."},
+    {id:19, style:'avoidant', text:'Với tôi, sự độc lập quan trọng hơn là gắn bó chặt chẽ với ai đó.', en:"To me, independence matters more than being closely attached to someone."},
+    {id:20, style:'fearful',  text:'Cảm xúc của tôi trong tình yêu thường thay đổi thất thường, khó đoán.', en:"My feelings in love often swing unpredictably."}
   ];
 
   var STYLE_META = {
-    secure:   {label:'An Toàn',  color:'var(--lavender)'},
-    anxious:  {label:'Lo Âu',    color:'var(--rose)'},
-    avoidant: {label:'Né Tránh', color:'var(--gold)'},
-    fearful:  {label:'Hỗn Loạn', color:'var(--fearful)'}
+    secure:   {label:'An Toàn',  en:'Secure',   color:'var(--lavender)'},
+    anxious:  {label:'Lo Âu',    en:'Anxious',  color:'var(--rose)'},
+    avoidant: {label:'Né Tránh', en:'Avoidant', color:'var(--gold)'},
+    fearful:  {label:'Hỗn Loạn', en:'Fearful',  color:'var(--fearful)'}
   };
 
   var TRI_META = {
-    intimacy:   'Thân mật',
-    passion:    'Đam mê',
-    commitment: 'Cam kết'
+    intimacy:   {vi:'Thân mật', en:'Intimacy'},
+    passion:    {vi:'Đam mê',   en:'Passion'},
+    commitment: {vi:'Cam kết',  en:'Commitment'}
   };
 
   // 8 kiểu tình yêu theo Sternberg, xác định bởi đỉnh nào đang "cao" (I=Thân mật, P=Đam mê, C=Cam kết)
@@ -741,6 +766,120 @@
     }
   };
 
+
+  var LOVE_TYPES_EN = {
+    'IPC':{name:'Consummate Love',  d:"All three vertices stand strong — the ideal state Sternberg called Consummate Love. The real prize is not reaching it, but keeping it alive every day."},
+    'IP': {name:'Romantic Love',    d:"Close and passionate, but the Commitment edge is still thin. This love is beautiful like a journey — the question is whether you both want to build a home together."},
+    'IC': {name:'Companionate Love',d:"Deeply understanding and lasting, like soulmates, but the flame of Passion is dimming. No worries — passion can be rekindled with novelty and real dates."},
+    'PC': {name:'Fatuous Love',     d:"Passionate and quickly bound before understanding had time to grow — Sternberg called this Fatuous Love. Slow down a beat to nurture Intimacy."},
+    'I':  {name:'Liking',           d:"A warm soul connection, like a deep friendship. If you want more, give Passion and Commitment room to grow."},
+    'P':  {name:'Infatuation',      d:"Intense attraction without roots yet — Sternberg called it Infatuation. This feeling is beautiful, and it needs time to become love."},
+    'C':  {name:'Empty Love',       d:"The bond remains but closeness and spark have faded — Sternberg called this Empty Love. It may be a wake-up call to look again and rebuild from the start."},
+    '':   {name:'Taking Shape',     d:"All three vertices are still low — you may be single, just starting out, or in a quiet season. That is okay; every triangle begins with its first strokes."}
+  };
+
+  var TRIANGLE_NOTES_EN = {
+    secure:{
+      intro:"Securely attached people have the best chance of reaching Consummate Love — where all three vertices of the triangle grow in balance.",
+      items:[
+        "Intimacy — high and healthy: you are not afraid to show vulnerability, and you listen with empathy, without judgment",
+        "Passion — steady: born of natural attraction, needing no drama or insecurity to stay alive",
+        "Commitment — solid: a voluntary choice built on trust, respect, and shared values"
+      ]
+    },
+    anxious:{
+      intro:"For the anxiously attached, the triangle often tilts heavily toward Passion — and Intimacy needs care so it does not turn into control.",
+      items:[
+        "Intimacy — intensely craved: wanting to merge at once, sometimes unintentionally crossing the other person's boundaries",
+        "Passion — very high but unstable: worry, jealousy and fear of loss are sometimes mistaken for 'the flame of love'; cycles of fighting and making up feel intense but wear you both down",
+        "Commitment — too early: demanding quick promises to soothe the fear of abandonment, before truly knowing each other"
+      ]
+    },
+    avoidant:{
+      intro:"For the avoidantly attached, Intimacy is usually the thinnest edge of the triangle — and the best place to start building.",
+      items:[
+        "Intimacy — low: a defensive wall makes you retreat when the relationship calls for deep soul connection",
+        "Passion — bright in the chase, but quick to cool once your partner starts needing attachment",
+        "Commitment — cautious: easily equated with losing freedom, so it tends to come from logic and duty rather than the heart's free choice"
+      ]
+    },
+    fearful:{
+      intro:"For the fearful-avoidant, all three edges of the triangle sway with the loop of 'reaching out, then pulling back'.",
+      items:[
+        "Intimacy — opening and closing: when they are distant you long to pull them close; when they come too close you feel suffocated and push away",
+        "Passion — intense but erratic: emotions rise and fall with your own rhythm of advance and retreat",
+        "Commitment — longed for and feared: wanting a harbor but afraid to hand over full trust; steadiness from both sides will firm up this edge"
+      ]
+    }
+  };
+
+  var RESULTS_EN = {
+    secure:{
+      title:'Secure',
+      subtitle:'Securely attached',
+      desc:"You feel at ease with both closeness and distance. You trust your partner, believe in your own worth, and are not frightened by the ordinary ups and downs of a relationship. Your thread of attachment is strong enough to withstand bumps, yet soft enough never to squeeze anyone.",
+      signs:["You say what you need instead of making your partner guess","In conflict, you focus on solving the problem rather than attacking each other","You do not panic when the two of you are apart for a while","You feel glad about your partner's successes and friendships without feeling threatened"],
+      roots:"A secure style usually forms when you grow up with caregivers who are steady and emotionally attuned — someone comforted you when you cried, someone was there when you needed them. That experience of being heard becomes a core belief: love is something that can be trusted. And the good news is this style can also be learned in adulthood, through healthy relationships.",
+      strengths:["Open, honest communication about feelings","Trusting your partner without needing to control","Balancing closeness with personal space"],
+      partnerNote:"You are the anchor of the relationship, but do not forget you get tired too. Let your partner know when you need care in return — being steady does not mean needing no one.",
+      growth:"You already have a solid foundation. Stay patient and generous if your partner has a different attachment style — your stability can become their safe base.",
+      compat:{
+        secure:  {h:5, t:"A 'golden foundation' couple — you both love wholeheartedly while keeping room for each other's own sky."},
+        anxious: {h:4, t:"Your steadiness is a natural balm for their worry. Just add a little patience."},
+        avoidant:{h:4, t:"You are secure enough not to read their distance as rejection — exactly what they need most."},
+        fearful: {h:4, t:"With your consistency, they can slowly learn that love does not have to come with hurt."}
+      }
+    },
+    anxious:{
+      title:'Anxious',
+      subtitle:'Anxiously attached',
+      desc:"You love with your whole heart and long for deep connection. But sometimes the fear of being abandoned makes you uneasy whenever your partner goes quiet or seems a little distant. Your thread of attachment is highly sensitive — even a slight tremor makes you worry it might be loosening.",
+      signs:["Re-reading messages to 'decode' your partner's mood","Needing frequent words of love and affirmation to feel at ease","Taking the blame to keep the peace, even when it is not really your fault","Feeling a small sting of insecurity when your partner enjoys time with others"],
+      roots:"An anxious style often stems from 'sometimes there, sometimes not' caregiving in childhood — love existed but was unpredictable, so the child learned to hold on tight and watch carefully so as not to be left behind. That insecurity is not your fault; it was once how you protected yourself.",
+      strengths:["Sensitive and attuned to other people's feelings","Loving wholeheartedly, with sincere and deep care","Actively nurturing and protecting the relationship"],
+      partnerNote:"For you, silence is scarier than an argument. A short text like 'I'm busy — let's talk tonight' is worth more than a thousand late explanations. Your partner should know this — and you can be the one to tell them.",
+      growth:"Practice small moments of self-soothing before turning to your partner for comfort. The most lasting sense of safety always begins within you.",
+      compat:{
+        secure:  {h:5, t:"A secure partner offers steady, judgment-free reassurance — the most healing match for you."},
+        anxious: {h:3, t:"You deeply understand each other's insecurity, but can spiral into worry together. Agree on clear 'reassurance rituals'."},
+        avoidant:{h:2, t:"The classic chase-and-run pair: the more you approach, the more they retreat. Not impossible, but you must both understand each other's styles very well."},
+        fearful: {h:3, t:"Intense feelings and deep mutual understanding — but also many storms. Learn not to react to each other's fears."}
+      }
+    },
+    avoidant:{
+      title:'Avoidant',
+      subtitle:'Avoidantly attached',
+      desc:"You value freedom and independence. Too much closeness can feel suffocating, so you tend to keep a safe distance, even from the person you love. Your thread of attachment is long and loose — free to move, yet sometimes leaving the other person feeling far away.",
+      signs:["You feel relieved to have alone time after days spent together","The phrase 'we need to talk' makes you want to… be somewhere else","You rarely volunteer your feelings unless asked","You show love through acts of care more than words"],
+      roots:"An avoidant style often forms when childhood emotions were rarely welcomed — crying met with 'stop it', sadness handled alone. That child learned: to be okay, you must rely on yourself. Your independence is a real strength — it is just that it was sometimes built from having to be strong too soon.",
+      strengths:["Strong, self-reliant, good at caring for yourself","Calm, rarely swept away by emotional turbulence","Respecting other people's personal space"],
+      partnerNote:"When you go quiet and withdraw, it usually means you are overwhelmed, not that you have stopped loving. Your partner needs to know that — and you need to tell them, even in one short line: 'Give me a little time, I'll come back.'",
+      growth:"Try letting yourself lean on someone a little. Sharing feelings does not make you weaker — it only makes the thread between you stronger.",
+      compat:{
+        secure:  {h:5, t:"A secure partner respects your space without sulking — you will find it easier to breathe and slowly open up."},
+        anxious: {h:2, t:"Their need for closeness can overwhelm you, and your retreat panics them. It takes a lot of communication to escape the chase-and-run loop."},
+        avoidant:{h:3, t:"Peaceful and respectful of each other's freedom — but at risk of becoming two parallel lines. Create deliberate moments of connection."},
+        fearful: {h:3, t:"You both hesitate to open up, so things move slowly; in return, your lack of pressure is something they deeply appreciate."}
+      }
+    },
+    fearful:{
+      title:'Fearful-Avoidant',
+      subtitle:'Fearful–avoidant attachment',
+      desc:"Your heart longs for love yet carries the fear of being hurt. You want closeness but fear getting too close, want to trust but struggle to trust fully. Your thread of attachment often knots in the middle — pulling closer and pushing away at the same time.",
+      signs:["You can be warm today and distant tomorrow, without knowing why","When things are going well, you feel uneasy — as if waiting for 'something' to happen","You have pushed away someone you love, just to see if they would stay","You long to be understood, yet fear being seen through"],
+      roots:"A fearful-avoidant style is often linked to experiences where the place that should have been safest was also the source of hurt — love and fear coming from the same place. Your heart learned to step forward and back at once to protect itself. This is the hardest style to carry, but also where healing brings the most visible change.",
+      strengths:["Deep, emotionally rich, and highly empathetic","Knowing pain well, you easily feel for others","Once the knot is untied, your love is remarkably steadfast"],
+      partnerNote:"What you need most is consistency — someone who does not leave when you unconsciously push them away. But your partner also needs to know what is happening inside you, even if you can only share a part. A part is a beginning.",
+      growth:"Give yourself time and patience. If it feels too hard to untangle alone, talking with a therapist can help you loosen the knots one by one.",
+      compat:{
+        secure:  {h:5, t:"The steady, unshakeable presence of a secure partner is the best environment for you to relearn trust."},
+        anxious: {h:3, t:"Two sensitive hearts with deep mutual empathy — but one person's fear can easily trigger the other's."},
+        avoidant:{h:3, t:"Their distance sometimes helps you feel safe, sometimes touches your fear of abandonment. Clear boundaries will help a lot."},
+        fearful: {h:2, t:"You understand each other to the point of heartache, but can shake together. If both of you commit to healing, this can be a rare and profound bond."}
+      }
+    }
+  };
+
   var THREAD_PATHS = {
     intro:   'M40,70 C 140,30 260,110 360,70',
     secure:  'M40,70 C 140,30 260,110 360,70',
@@ -753,6 +892,7 @@
 
   var state = {
     view:'intro',
+    lang:'vi',
     index:0,
     answers:{},
     childAnswers:{},
@@ -760,6 +900,83 @@
   };
 
   var app = document.getElementById('app');
+
+  /* ---------------- NGON NGU / LANGUAGE ---------------- */
+
+  var UI = {
+    vi:{
+      eyebrow:'Trắc nghiệm tâm lý',
+      titleHTML:'Xu Hướng Gắn Bó <em>Trong Tình Yêu</em>',
+      sub:'Cách bạn yêu, cách bạn phản ứng khi gần gũi hay xa cách — phần lớn được định hình từ những trải nghiệm gắn bó đầu đời. Bắt đầu bằng vài câu nhẹ nhàng về tuổi thơ, rồi tới cách bạn yêu hôm nay, và cuối cùng là tam giác tình yêu của bạn — để khám phá không chỉ phong cách gắn bó, mà cả hình dạng tình yêu bạn đang xây dựng.',
+      cta:'Bắt đầu khảo sát →',
+      meta:'29 câu hỏi <span class="dot"></span> khoảng 6–8 phút <span class="dot"></span> hoàn toàn riêng tư',
+      visits:' lượt truy cập',
+      you:'Bạn', them:'Người ấy',
+      qnumChild:'MỘT CHÚT VỀ TUỔI THƠ CỦA BẠN',
+      qnumMain:'MỨC ĐỘ ĐỒNG Ý CỦA BẠN',
+      qnumTri:'TAM GIÁC TÌNH YÊU CỦA BẠN',
+      likertLow:'Hoàn toàn<br>không đồng ý', likertHigh:'Hoàn toàn<br>đồng ý',
+      softChild:'Không có câu trả lời đúng hay sai. Hãy chọn điều gần với ký ức của bạn nhất — nếu khó chọn, cứ tin vào cảm giác đầu tiên. Bạn đã lớn lên và đã làm rất tốt rồi.',
+      softTri:'Phần cuối cùng! Nếu bạn đang độc thân, hãy trả lời dựa trên mối quan hệ gần nhất hoặc cách bạn hình dung về tình yêu của mình.',
+      interludeBig:'Bây giờ cùng tìm hiểu quá trình trưởng thành nhé',
+      interludeSub:'Cảm ơn bạn đã chia sẻ về tuổi thơ của mình &#128155;',
+      qWord:'Câu ', back:'← Quay lại',
+      resultEyebrow:'Kết quả của bạn',
+      secondaryTpl:'Không ai bị đóng khung trong một nhãn duy nhất. Phong cách <strong>{P}</strong> là phản ứng chủ đạo của bạn, nhưng khi mối quan hệ căng thẳng, xu hướng <strong>{S}</strong> trong bạn có thể được kích hoạt. Hiểu cả hai giúp bạn nhẹ nhàng hơn với chính mình.',
+      secDist:'Phân bố phong cách gắn bó của bạn',
+      secSigns:'Biểu hiện thường gặp ở bạn',
+      secStrengths:'Điểm mạnh của bạn',
+      secRoots:'Gốc rễ hình thành',
+      secPartner:'Điều người yêu bạn nên biết',
+      secCompat:'Độ hợp với các phong cách khác',
+      secTri:'Tam giác tình yêu của bạn',
+      secGrowth:'Gợi ý để phát triển',
+      conclTitle:'Gắn bó không phải là một án chung thân',
+      concl1:'Phong cách gắn bó không định sẵn số phận tình yêu của bạn. Nó chỉ là điểm khởi đầu — một tấm bản đồ vẽ nên từ quá khứ, chứ không phải bản án cho tương lai.',
+      concl2:'Các nhà tâm lý học gọi hành trình chuyển dịch về phía an toàn là <strong>"An toàn tự tạo" (Earned Security)</strong>. Dù bạn thuộc kiểu nào, bạn hoàn toàn có thể tiến gần hơn tới sự an toàn — bằng cách bước vào một mối quan hệ với người an toàn, thực hành nhận thức về cảm xúc của mình, và học cách giao tiếp rõ ràng thay vì phản ứng theo nỗi sợ cũ.',
+      concl3:'Hãy nuôi dưỡng sự <strong>Thân mật</strong> bằng cách tôn trọng ranh giới, giữ ngọn lửa <strong>Đam mê</strong> bằng sự thấu hiểu, và xây <strong>Cam kết</strong> từ sự trưởng thành của lý trí. Ba đỉnh ấy, khi cân bằng, chính là hình dạng của một tình yêu trọn vẹn.',
+      disclaimer:'Đây là bài trắc nghiệm mang tính tham khảo, xây dựng dựa trên Lý thuyết gắn bó (Bowlby & Ainsworth) và Tam giác tình yêu của Robert Sternberg. Kết quả không phải là chẩn đoán và không thay thế cho đánh giá hay tư vấn từ chuyên gia tâm lý.',
+      restart:'Làm lại khảo sát'
+    },
+    en:{
+      eyebrow:'Psychology quiz',
+      titleHTML:'Attachment Styles <em>In Love</em>',
+      sub:"How you love and how you react to closeness or distance are largely shaped by your earliest bonds. Start with a few gentle questions about childhood, then how you love today, and finally your love triangle — to discover not just your attachment style, but the shape of the love you are building.",
+      cta:'Start the quiz →',
+      meta:'29 questions <span class="dot"></span> about 6–8 minutes <span class="dot"></span> completely private',
+      visits:' visits',
+      you:'You', them:'Them',
+      qnumChild:'A LITTLE ABOUT YOUR CHILDHOOD',
+      qnumMain:'HOW MUCH DO YOU AGREE',
+      qnumTri:'YOUR LOVE TRIANGLE',
+      likertLow:'Strongly<br>disagree', likertHigh:'Strongly<br>agree',
+      softChild:"There are no right or wrong answers. Choose what feels closest to your memory — when in doubt, trust your first instinct. You have grown up, and you have done so well.",
+      softTri:"Last part! If you're single, answer based on your most recent relationship or how you imagine your love to be.",
+      interludeBig:"Now let's explore how you have grown",
+      interludeSub:'Thank you for sharing about your childhood &#128155;',
+      qWord:'Question ', back:'← Back',
+      resultEyebrow:'Your result',
+      secondaryTpl:"No one fits inside a single label. <strong>{P}</strong> is your dominant style, but when the relationship is under stress, your <strong>{S}</strong> side may be triggered. Knowing both helps you be gentler with yourself.",
+      secDist:'Your attachment style profile',
+      secSigns:'Common signs in you',
+      secStrengths:'Your strengths',
+      secRoots:'Where it comes from',
+      secPartner:'What your partner should know',
+      secCompat:'How you match with other styles',
+      secTri:'Your love triangle',
+      secGrowth:'Ways to grow',
+      conclTitle:'Attachment is not a life sentence',
+      concl1:"Your attachment style does not seal the fate of your love life. It is only a starting point — a map drawn from the past, not a verdict on the future.",
+      concl2:"Psychologists call the journey toward security <strong>'Earned Security'</strong>. Whatever your style, you can move closer to safety — by being with a secure partner, practicing awareness of your emotions, and learning to communicate clearly instead of reacting from old fears.",
+      concl3:"Nurture <strong>Intimacy</strong> by honoring boundaries, keep <strong>Passion</strong> alive through understanding, and build <strong>Commitment</strong> from a mature, willing mind. Those three vertices, in balance, are the very shape of a consummate love.",
+      disclaimer:"This quiz is for reflection only, based on Attachment Theory (Bowlby & Ainsworth) and Robert Sternberg's Triangular Theory of Love. Results are not a diagnosis and do not replace assessment or advice from a mental health professional.",
+      restart:'Retake the quiz'
+    }
+  };
+
+  function T(key){ return UI[state.lang][key]; }
+  function qText(q){ return (state.lang === 'en' && q.en) ? q.en : q.text; }
+  function styleLabel(k){ return state.lang === 'en' ? STYLE_META[k].en : STYLE_META[k].label; }
 
   /* ---------------- VISIT COUNTER ---------------- */
 
@@ -773,26 +990,36 @@
       } else {
         badges[i].classList.remove('hidden');
         badges[i].innerHTML = '<span class="heart">&#10084;</span> <span><strong>' +
-          visitCount.toLocaleString('vi-VN') + '</strong> lượt truy cập</span>';
+          visitCount.toLocaleString(state.lang === 'en' ? 'en-US' : 'vi-VN') + '</strong>' + T('visits') + '</span>';
       }
     }
   }
 
   async function initVisitCounter(){
-    if(!window.storage) return; // môi trường không hỗ trợ: ẩn badge
-    var count = 0;
-    try{
-      var res = await window.storage.get('visit-count', true);
-      if(res && res.value) count = parseInt(res.value, 10) || 0;
-    }catch(e){ /* key chưa tồn tại */ }
-    count += 1;
-    try{
-      await window.storage.set('visit-count', String(count), true);
-      visitCount = count;
-      updateVisitBadges();
-    }catch(e){
-      console.error('Không lưu được lượt truy cập:', e);
+    // 1) Trong Claude.ai Artifacts: dùng bộ nhớ chia sẻ của Artifact
+    if(window.storage){
+      var count = 0;
+      try{
+        var res = await window.storage.get('visit-count', true);
+        if(res && res.value) count = parseInt(res.value, 10) || 0;
+      }catch(e){ /* key chưa tồn tại */ }
+      count += 1;
+      try{
+        await window.storage.set('visit-count', String(count), true);
+        visitCount = count;
+        updateVisitBadges();
+        return;
+      }catch(e){ /* rơi xuống phương án 2 */ }
     }
+    // 2) Trên web thường (GitHub Pages...): dùng bộ đếm công khai miễn phí Abacus
+    try{
+      var resp = await fetch('https://abacus.jasoncameron.dev/hit/nbpthanh-quiz-kieu-gan-bo/visits');
+      var data = await resp.json();
+      if(data && typeof data.value === 'number'){
+        visitCount = data.value;
+        updateVisitBadges();
+      }
+    }catch(e){ /* mất mạng hoặc dịch vụ tạm nghỉ: badge tự ẩn, trang vẫn chạy */ }
   }
 
   /* ---------------- SOUND ENGINE (Web Audio, không cần file ngoài) ---------------- */
@@ -885,6 +1112,27 @@
     document.body.appendChild(btn);
   }
 
+  function mountLangToggle(){
+    var btn = document.createElement('button');
+    btn.className = 'lang-toggle';
+    btn.type = 'button';
+    function refresh(){
+      btn.textContent = state.lang === 'vi' ? 'EN' : 'VI';
+      btn.setAttribute('aria-label', state.lang === 'vi' ? 'Switch to English' : 'Chuyển sang tiếng Việt');
+      btn.title = btn.getAttribute('aria-label');
+    }
+    btn.addEventListener('click', function(){
+      state.lang = (state.lang === 'vi') ? 'en' : 'vi';
+      quizShell = null;      // khung quiz cần dựng lại theo ngôn ngữ mới
+      transitioning = false;
+      render();              // câu trả lời và tiến độ được giữ nguyên
+      updateVisitBadges();
+      refresh();
+    });
+    refresh();
+    document.body.appendChild(btn);
+  }
+
   /* ---------------- HELPERS ---------------- */
 
   function el(tag, cls, html){
@@ -914,7 +1162,7 @@
     path.style.transition = 'stroke-dashoffset 1.3s ease';
     svg.appendChild(path);
 
-    [{cx:40, label:'Bạn', fill:'var(--rose)'}, {cx:360, label:'Người ấy', fill:'var(--lavender)'}].forEach(function(p){
+    [{cx:40, label:T('you'), fill:'var(--rose)'}, {cx:360, label:T('them'), fill:'var(--lavender)'}].forEach(function(p){
       var c = document.createElementNS(ns,'circle');
       c.setAttribute('cx', p.cx); c.setAttribute('cy',70); c.setAttribute('r',7);
       c.setAttribute('fill', p.fill);
@@ -996,7 +1244,7 @@
       t.setAttribute('x', l.v.x); t.setAttribute('y', l.v.y + l.dy);
       t.setAttribute('text-anchor', l.anchor);
       t.setAttribute('class','tri-vertex-label');
-      t.textContent = TRI_META[l.key];
+      t.textContent = TRI_META[l.key][state.lang];
       svg.appendChild(t);
       var p = document.createElementNS(ns,'text');
       p.setAttribute('x', l.v.x); p.setAttribute('y', l.v.y + l.pdy);
@@ -1022,23 +1270,23 @@
     var badge = el('div','visit-badge hidden','');
     s.appendChild(badge);
 
-    s.appendChild(el('div','eyebrow','Trắc nghiệm tâm lý'));
-    var title = el('h1','intro-title','Xu Hướng Gắn Bó <em>Trong Tình Yêu</em>');
+    s.appendChild(el('div','eyebrow', T('eyebrow')));
+    var title = el('h1','intro-title', T('titleHTML'));
     s.appendChild(title);
-    s.appendChild(el('p','intro-sub','Cách bạn yêu, cách bạn phản ứng khi gần gũi hay xa cách — phần lớn được định hình từ những trải nghiệm gắn bó đầu đời. Bắt đầu bằng vài câu nhẹ nhàng về tuổi thơ, rồi tới cách bạn yêu hôm nay, và cuối cùng là tam giác tình yêu của bạn — để khám phá không chỉ phong cách gắn bó, mà cả hình dạng tình yêu bạn đang xây dựng.'));
+    s.appendChild(el('p','intro-sub', T('sub')));
 
     var threadWrap = el('div','thread-wrap');
     threadWrap.appendChild(threadSVG('intro'));
     s.appendChild(threadWrap);
 
-    var cta = el('button','cta','Bắt đầu khảo sát →');
+    var cta = el('button','cta', T('cta'));
     cta.addEventListener('click', function(){
       sound.start();
       state.view = 'quiz'; state.index = 0; render();
     });
     s.appendChild(cta);
 
-    var meta = el('div','meta-row','29 câu hỏi <span class="dot"></span> khoảng 6–8 phút <span class="dot"></span> hoàn toàn riêng tư');
+    var meta = el('div','meta-row', T('meta'));
     s.appendChild(meta);
 
     app.appendChild(s);
@@ -1082,7 +1330,7 @@
     s.appendChild(holder);
 
     var nav = el('div','quiz-nav');
-    var back = el('button','back-btn','← Quay lại');
+    var back = el('button','back-btn', T('back'));
     back.addEventListener('click', function(){
       if(transitioning || state.index === 0) return;
       sound.back();
@@ -1126,8 +1374,8 @@
   function buildInterludeCard(){
     var d = el('div','interlude card-anim');
     d.appendChild(el('div','interlude-icon','&#127793;'));
-    d.appendChild(el('div','interlude-big','Bây giờ cùng tìm hiểu quá trình trưởng thành nhé'));
-    d.appendChild(el('div','interlude-sub','Cảm ơn bạn đã chia sẻ về tuổi thơ của mình &#128155;'));
+    d.appendChild(el('div','interlude-big', T('interludeBig')));
+    d.appendChild(el('div','interlude-sub', T('interludeSub')));
     return d;
   }
 
@@ -1138,12 +1386,12 @@
 
     if(phase === 'child'){
       var cq = CHILD_QUESTIONS[state.index];
-      card.appendChild(el('div','question-num','MỘT CHÚT VỀ TUỔI THƠ CỦA BẠN'));
-      card.appendChild(el('div','question-text', cq.text));
+      card.appendChild(el('div','question-num', T('qnumChild')));
+      card.appendChild(el('div','question-text', qText(cq)));
 
       var list = el('div','choice-list');
       cq.options.forEach(function(opt, oi){
-        var btn = el('button','choice-btn', opt.text);
+        var btn = el('button','choice-btn', qText(opt));
         if(state.childAnswers[cq.id] === opt.style) btn.classList.add('selected');
         btn.addEventListener('click', function(){
           if(transitioning) return;
@@ -1157,23 +1405,23 @@
         list.appendChild(btn);
       });
       card.appendChild(list);
-      card.appendChild(el('div','soft-note','Không có câu trả lời đúng hay sai. Hãy chọn điều gần với ký ức của bạn nhất — nếu khó chọn, cứ tin vào cảm giác đầu tiên. Bạn đã lớn lên và đã làm rất tốt rồi.'));
+      card.appendChild(el('div','soft-note', T('softChild')));
     } else {
       var q, label, store;
       if(phase === 'main'){
         q = QUESTIONS[state.index - nChild];
-        label = 'MỨC ĐỘ ĐỒNG Ý CỦA BẠN';
+        label = T('qnumMain');
         store = state.answers;
       } else {
         q = TRIANGLE_QUESTIONS[state.index - nChild - nMain];
-        label = 'TAM GIÁC TÌNH YÊU CỦA BẠN';
+        label = T('qnumTri');
         store = state.triAnswers;
       }
       card.appendChild(el('div','question-num', label));
-      card.appendChild(el('div','question-text', q.text));
+      card.appendChild(el('div','question-text', qText(q)));
 
       var likert = el('div','likert');
-      var labels = ['Hoàn toàn\nkhông đồng ý','','','','Hoàn toàn\nđồng ý'];
+      var labels = [T('likertLow'),'','','',T('likertHigh')];
       for(var i=1;i<=5;i++){
         (function(val){
           var col = el('div','likert-col');
@@ -1189,14 +1437,14 @@
             goForward();
           });
           col.appendChild(btn);
-          var cap = el('div','likert-caption', labels[val-1].replace('\n','<br>'));
+          var cap = el('div','likert-caption', labels[val-1]);
           col.appendChild(cap);
           likert.appendChild(col);
         })(i);
       }
       card.appendChild(likert);
       if(phase === 'tri' && state.index === nChild + nMain){
-        card.appendChild(el('div','soft-note','Phần cuối cùng! Nếu bạn đang độc thân, hãy trả lời dựa trên mối quan hệ gần nhất hoặc cách bạn hình dung về tình yêu của mình.'));
+        card.appendChild(el('div','soft-note', T('softTri')));
       }
     }
     return card;
@@ -1213,7 +1461,7 @@
     var pct = (state.index) / TOTAL * 100;
     quizShell.fill.style.width = pct + '%';
     quizShell.bead.style.left = pct + '%';
-    quizShell.ptext.textContent = 'Câu ' + (state.index+1) + ' / ' + TOTAL;
+    quizShell.ptext.textContent = T('qWord') + (state.index+1) + ' / ' + TOTAL;
     quizShell.back.disabled = (state.index === 0);
 
     if(direction === 'interlude'){
@@ -1280,9 +1528,9 @@
     var s = el('div','screen');
     var scored = computeScores();
     var top = scored.top;
-    var r = RESULTS[top];
+    var r = (state.lang === 'en' ? RESULTS_EN : RESULTS)[top];
 
-    s.appendChild(el('div','result-eyebrow','Kết quả của bạn'));
+    s.appendChild(el('div','result-eyebrow', T('resultEyebrow')));
     s.appendChild(el('h2','result-title', r.title));
     s.appendChild(el('p','result-subtitle', r.subtitle));
 
@@ -1293,17 +1541,15 @@
     s.appendChild(el('p','result-desc', r.desc));
 
     var secLine = el('div','secondary-line');
-    secLine.innerHTML = 'Không ai bị đóng khung trong một nhãn duy nhất. Phong cách <strong>' +
-      STYLE_META[top].label + '</strong> là phản ứng chủ đạo của bạn, nhưng khi mối quan hệ căng thẳng, xu hướng <strong>' +
-      STYLE_META[scored.secondary].label + '</strong> trong bạn có thể được kích hoạt. Hiểu cả hai giúp bạn nhẹ nhàng hơn với chính mình.';
+    secLine.innerHTML = T('secondaryTpl').replace('{P}', styleLabel(top)).replace('{S}', styleLabel(scored.secondary));
     s.appendChild(secLine);
 
     var barsWrap = el('div','bars');
-    barsWrap.appendChild(el('div','section-label','Phân bố phong cách gắn bó của bạn'));
+    barsWrap.appendChild(el('div','section-label', T('secDist')));
     ['secure','anxious','avoidant','fearful'].forEach(function(k){
       var row = el('div','bar-row');
       var top2 = el('div','bar-top');
-      var left = el('span', null, STYLE_META[k].label);
+      var left = el('span', null, styleLabel(k));
       var right = el('span', null, scored.pct[k] + '%');
       top2.appendChild(left); top2.appendChild(right);
       row.appendChild(top2);
@@ -1319,36 +1565,36 @@
     s.appendChild(barsWrap);
 
     var signsCard = el('div','card-block');
-    signsCard.appendChild(el('div','section-label','Biểu hiện thường gặp ở bạn'));
+    signsCard.appendChild(el('div','section-label', T('secSigns')));
     var sul = el('ul');
     r.signs.forEach(function(txt){ sul.appendChild(el('li', null, txt)); });
     signsCard.appendChild(sul);
     s.appendChild(signsCard);
 
     var strengthCard = el('div','card-block');
-    strengthCard.appendChild(el('div','section-label','Điểm mạnh của bạn'));
+    strengthCard.appendChild(el('div','section-label', T('secStrengths')));
     var ul = el('ul');
     r.strengths.forEach(function(txt){ ul.appendChild(el('li', null, txt)); });
     strengthCard.appendChild(ul);
     s.appendChild(strengthCard);
 
     var rootsCard = el('div','card-block');
-    rootsCard.appendChild(el('div','section-label','Gốc rễ hình thành'));
+    rootsCard.appendChild(el('div','section-label', T('secRoots')));
     rootsCard.appendChild(el('p', null, r.roots));
     s.appendChild(rootsCard);
 
     var partnerCard = el('div','card-block');
-    partnerCard.appendChild(el('div','section-label','Điều người yêu bạn nên biết'));
+    partnerCard.appendChild(el('div','section-label', T('secPartner')));
     partnerCard.appendChild(el('p', null, r.partnerNote));
     s.appendChild(partnerCard);
 
     var compatCard = el('div','card-block');
-    compatCard.appendChild(el('div','section-label','Độ hợp với các phong cách khác'));
+    compatCard.appendChild(el('div','section-label', T('secCompat')));
     ['secure','anxious','avoidant','fearful'].forEach(function(k){
       var c = r.compat[k];
       var row = el('div','compat-row');
       var head = el('div','compat-head');
-      head.appendChild(el('span','compat-name','+ ' + STYLE_META[k].label));
+      head.appendChild(el('span','compat-name','+ ' + styleLabel(k)));
       var hearts = '';
       for(var hi=1; hi<=5; hi++){
         hearts += '<span class="' + (hi <= c.h ? 'on' : 'off') + '">&#10084;</span>';
@@ -1361,13 +1607,14 @@
     s.appendChild(compatCard);
 
     var triCard = el('div','card-block');
-    triCard.appendChild(el('div','section-label','Tam giác tình yêu của bạn'));
-    var tnote = TRIANGLE_NOTES[top];
+    triCard.appendChild(el('div','section-label', T('secTri')));
+    var tnote = (state.lang === 'en' ? TRIANGLE_NOTES_EN : TRIANGLE_NOTES)[top];
     triCard.appendChild(el('p', null, tnote.intro));
     var triWrap = el('div','triangle-wrap');
     triWrap.appendChild(triangleSVG(scored.tri));
     triCard.appendChild(triWrap);
-    var lt = LOVE_TYPES[scored.loveKey] || LOVE_TYPES[''];
+    var LT = state.lang === 'en' ? LOVE_TYPES_EN : LOVE_TYPES;
+    var lt = LT[scored.loveKey] || LT[''];
     triCard.appendChild(el('div','lovetype-name', lt.name));
     triCard.appendChild(el('p', null, lt.d));
     var tul = el('ul');
@@ -1377,26 +1624,26 @@
     s.appendChild(triCard);
 
     var growthCard = el('div','card-block');
-    growthCard.appendChild(el('div','section-label','Gợi ý để phát triển'));
+    growthCard.appendChild(el('div','section-label', T('secGrowth')));
     growthCard.appendChild(el('p', null, r.growth));
     s.appendChild(growthCard);
 
     var concl = el('div','conclusion');
-    concl.appendChild(el('div','section-label','Gắn bó không phải là một án chung thân'));
+    concl.appendChild(el('div','section-label', T('conclTitle')));
     var p1 = el('p');
-    p1.innerHTML = 'Phong cách gắn bó không định sẵn số phận tình yêu của bạn. Nó chỉ là điểm khởi đầu — một tấm bản đồ vẽ nên từ quá khứ, chứ không phải bản án cho tương lai.';
+    p1.innerHTML = T('concl1');
     concl.appendChild(p1);
     var p2 = el('p');
-    p2.innerHTML = 'Các nhà tâm lý học gọi hành trình chuyển dịch về phía an toàn là <strong>"An toàn tự tạo" (Earned Security)</strong>. Dù bạn thuộc kiểu nào, bạn hoàn toàn có thể tiến gần hơn tới sự an toàn — bằng cách bước vào một mối quan hệ với người an toàn, thực hành nhận thức về cảm xúc của mình, và học cách giao tiếp rõ ràng thay vì phản ứng theo nỗi sợ cũ.';
+    p2.innerHTML = T('concl2');
     concl.appendChild(p2);
     var p3 = el('p');
-    p3.innerHTML = 'Hãy nuôi dưỡng sự <strong>Thân mật</strong> bằng cách tôn trọng ranh giới, giữ ngọn lửa <strong>Đam mê</strong> bằng sự thấu hiểu, và xây <strong>Cam kết</strong> từ sự trưởng thành của lý trí. Ba đỉnh ấy, khi cân bằng, chính là hình dạng của một tình yêu trọn vẹn.';
+    p3.innerHTML = T('concl3');
     concl.appendChild(p3);
     s.appendChild(concl);
 
-    s.appendChild(el('div','disclaimer','Đây là bài trắc nghiệm mang tính tham khảo, xây dựng dựa trên Lý thuyết gắn bó (Bowlby & Ainsworth) và Tam giác tình yêu của Robert Sternberg. Kết quả không phải là chẩn đoán và không thay thế cho đánh giá hay tư vấn từ chuyên gia tâm lý.'));
+    s.appendChild(el('div','disclaimer', T('disclaimer')));
 
-    var restart = el('button','restart-btn','Làm lại khảo sát');
+    var restart = el('button','restart-btn', T('restart'));
     restart.addEventListener('click', function(){
       sound.back();
       state.view='intro'; state.index=0; state.answers={}; state.childAnswers={}; state.triAnswers={}; render();
@@ -1418,6 +1665,7 @@
 
   render();
   mountSoundToggle();
+  mountLangToggle();
   initVisitCounter();
 })();
 </script>

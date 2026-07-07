@@ -1,0 +1,40 @@
+CẬP NHẬT BẢN SONG NGỮ + BỘ ĐẾM LÊN GITHUB — 1 LẦN KÉO-THẢ
+=============================================================
+
+Link của bạn (không đổi):  https://nbpthanh.github.io/Quiz-Kieu-Gan-Bo/
+
+Bản này có gì mới:
+- Nút EN/VI ở góc trên phải: chuyển toàn bộ quiz sang tiếng Anh
+- Huy hiệu "❤ lượt truy cập / visits" chạy được trên GitHub Pages
+  (dùng dịch vụ đếm miễn phí Abacus, số đếm là công khai)
+
+CÁCH CẬP NHẬT (2 phút):
+
+1. Mở https://github.com/nbpthanh/Quiz-Kieu-Gan-Bo
+2. Bấm "Add file" → "Upload files"
+3. Kéo-thả CẢ 2 FILE trong gói này vào:
+      - index.html
+      - khao-sat-share-image.png
+   (trùng tên → GitHub tự ghi đè bản cũ, không cần xóa trước)
+4. Bấm nút xanh "Commit changes"
+5. Đợi 1–2 phút cho GitHub Pages deploy
+
+KIỂM TRA SAU KHI CẬP NHẬT:
+- Mở https://nbpthanh.github.io/Quiz-Kieu-Gan-Bo/
+  → thấy nút EN tròn ở góc trên phải là bản mới đã live
+  → bấm EN thử: toàn trang chuyển tiếng Anh
+  → mở lại trang lần 2: huy hiệu ❤ lượt truy cập hiện số đếm
+- Nếu vẫn thấy bản cũ: nhấn Ctrl+Shift+R (Cmd+Shift+R trên Mac)
+  để xóa cache trình duyệt
+
+NẾU CHƯA LÀM BƯỚC SỬA ẢNH SHARE LẦN TRƯỚC:
+File index.html này đã bao gồm luôn bản sửa lỗi og:url (404 trên
+Facebook Debugger). Sau khi upload, vào
+https://developers.facebook.com/tools/debug → dán link → "Thu thập
+lại" 2–3 lần, và https://www.linkedin.com/post-inspector → "Inspect".
+Kết quả đúng: Mã phản hồi 200, ảnh Sternberg hiện trong Xem trước.
+
+GHI CHÚ VỀ BỘ ĐẾM:
+- Số đếm bắt đầu từ 0 tại lần mở trang đầu tiên sau khi cập nhật
+- Nếu dịch vụ đếm tạm gián đoạn, huy hiệu tự ẩn, trang vẫn chạy
+  bình thường
